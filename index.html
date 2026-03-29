@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Asia Trip 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#24657e",
+        "on-primary": "#ffffff",
+        "primary-container": "#8ecae6",
+        "on-primary-container": "#0a566e",
+        "primary-fixed": "#bde9ff",
+        "primary-fixed-dim": "#93cfeb",
+        "on-primary-fixed": "#001f2a",
+        "on-primary-fixed-variant": "#004d64",
+        "secondary": "#43664d",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#c2e9c9",
+        "on-secondary-container": "#486a51",
+        "secondary-fixed": "#c5eccc",
+        "secondary-fixed-dim": "#aad0b1",
+        "on-secondary-fixed": "#00210e",
+        "on-secondary-fixed-variant": "#2c4e36",
+        "tertiary": "#605f50",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#c5c2b0",
+        "on-tertiary-container": "#515042",
+        "tertiary-fixed": "#e6e3d0",
+        "tertiary-fixed-dim": "#c9c7b5",
+        "on-tertiary-fixed": "#1c1c11",
+        "on-tertiary-fixed-variant": "#48473a",
+        "error": "#ba1a1a",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "on-error-container": "#93000a",
+        "background": "#f8f9fa",
+        "on-background": "#191c1d",
+        "surface": "#f8f9fa",
+        "surface-dim": "#d9dadb",
+        "surface-bright": "#f8f9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f4f5",
+        "surface-container": "#edeeef",
+        "surface-container-high": "#e7e8e9",
+        "surface-container-highest": "#e1e3e4",
+        "surface-variant": "#e1e3e4",
+        "surface-tint": "#24657e",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#40484c",
+        "outline": "#70787d",
+        "outline-variant": "#c0c8cd",
+        "inverse-surface": "#2e3132",
+        "inverse-on-surface": "#f0f1f2",
+        "inverse-primary": "#93cfeb",
+      },
+      fontFamily: {
+        "headline": ["Plus Jakarta Sans"],
+        "body": ["Inter"],
+        "label": ["Inter"]
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem",
+        "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"
+      },
+    },
+  },
+}
+</script>
+<style>
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { min-height: 100dvh; }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- TOP HEADER -->
+<header class="fixed top-0 w-full flex justify-between items-center px-5 h-16 bg-surface/80 backdrop-blur-md z-50 border-b border-surface-container">
+  <div class="flex items-center gap-3">
+    <span class="text-2xl">✈️</span>
+    <div>
+      <h1 class="font-headline font-bold text-on-surface text-base leading-tight">Asia Trip 2026</h1>
+      <p class="text-on-surface-variant text-xs">May 18 – June 6</p>
+    </div>
+  </div>
+  <div class="text-right">
+    <p class="font-headline font-semibold text-primary text-sm">19 days</p>
+    <p class="text-on-surface-variant text-xs">5 cities</p>
+  </div>
+</header>
+
+<!-- CITY TABS -->
+<div class="fixed top-16 w-full z-40 bg-surface/90 backdrop-blur-md border-b border-surface-container">
+  <div class="flex overflow-x-auto no-scrollbar px-4 py-3 gap-2">
+    <button onclick="switchCity('hk')" id="tab-hk" class="city-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-sm whitespace-nowrap shadow-sm">🇭🇰 Hong Kong</button>
+    <button onclick="switchCity('seoul')" id="tab-seoul" class="city-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-sm whitespace-nowrap">🇰🇷 Seoul</button>
+    <button onclick="switchCity('shanghai')" id="tab-shanghai" class="city-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-sm whitespace-nowrap">🇨🇳 Shanghai</button>
+    <button onclick="switchCity('xian')" id="tab-xian" class="city-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-sm whitespace-nowrap">🏛️ Xi'an</button>
+    <button onclick="switchCity('beijing')" id="tab-beijing" class="city-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-sm whitespace-nowrap">🏯 Beijing</button>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="pt-32 pb-10 px-4">
+
+  <!-- ============================================================ -->
+  <!-- HONG KONG -->
+  <!-- ============================================================ -->
+  <div id="city-hk" class="city-panel space-y-5">
+    <div class="relative h-44 rounded-3xl overflow-hidden shadow-sm" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#c62a47 100%)">
+      <div class="absolute inset-0 flex flex-col justify-end p-5">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Stop 1 of 5</p>
+            <h2 class="text-white font-headline text-3xl font-bold">Hong Kong</h2>
+            <p class="text-white/80 text-sm mt-0.5">May 19 – 22 · 4 nights</p>
+          </div>
+          <span class="text-5xl">🇭🇰</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">hotel</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">The Salisbury YMCA</p>
+        <p class="text-on-surface-variant text-[10px]">4 nights</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 18 · 11:50</p>
+        <p class="text-on-surface-variant text-[10px]">Etihad EY160/870</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 23 · 09:45</p>
+        <p class="text-on-surface-variant text-[10px]">→ Seoul</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival Flight</span>
+          <h3 class="font-headline font-bold text-base mt-0.5">Etihad · Ref: 8Z4DFE</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">EY160 + EY870 · 25 kg + 7 kg carry-on</p>
+        </div>
+        <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">flight</span></div>
+      </div>
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">WAW</p>
+          <p class="font-headline font-bold text-xl">11:50</p>
+          <p class="text-on-surface-variant text-xs">May 18</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center px-3">
+          <div class="w-full flex items-center gap-1">
+            <div class="h-px flex-1 bg-outline-variant"></div>
+            <span class="material-symbols-outlined text-primary text-base">airplanemode_active</span>
+            <div class="h-px flex-1 bg-outline-variant"></div>
+          </div>
+          <p class="text-[10px] text-on-surface-variant mt-1">Via Abu Dhabi</p>
+        </div>
+        <div class="text-right">
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">HKG</p>
+          <p class="font-headline font-bold text-xl">+1 day</p>
+          <p class="text-on-surface-variant text-xs">May 19</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+      <div class="flex gap-4 items-center">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
+          <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <span class="text-[10px] font-bold text-secondary tracking-widest uppercase">Accommodation</span>
+          <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">The Salisbury YMCA of Hong Kong</h3>
+          <p class="text-on-surface-variant text-xs mt-1">May 19 – 23 · 4 nights · Trip.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
+      <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
+        <button onclick="switchDay('hk','1')" id="day-hk-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Tue May 19</button>
+        <button onclick="switchDay('hk','2')" id="day-hk-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Wed May 20</button>
+        <button onclick="switchDay('hk','3')" id="day-hk-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Thu May 21</button>
+        <button onclick="switchDay('hk','4')" id="day-hk-4" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Fri May 22</button>
+      </div>
+      <div id="daypanel-hk-1" class="day-panel space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-headline font-bold text-sm text-on-secondary-container">1</div>
+          <p class="font-headline font-bold">Hong Kong Island</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Victoria Peak</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Take the Peak Tram for panoramic views over the city and harbour. Best in the morning before clouds roll in.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Central District</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore SoHo, the mid-levels escalator, and colonial-era landmarks. Great street food around the market areas.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Star Ferry Crossing</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Take the iconic Star Ferry from Central to Tsim Sha Tsui for the classic harbour view at dusk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-hk-2" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">2</div>
+          <p class="font-headline font-bold">Kowloon</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Temple Street & Markets</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Browse street markets in Jordan and Yau Ma Tei for local snacks and souvenirs.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tsim Sha Tsui Waterfront</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">The Avenue of Stars, Museum of History, and the famous promenade facing Hong Kong Island.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening · 8 PM</span>
+              <h4 class="font-headline font-semibold mt-0.5">Symphony of Lights</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">World's largest permanent light and sound show, viewable from the Tsim Sha Tsui waterfront.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-hk-3" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">3</div>
+          <p class="font-headline font-bold">Lantau Island</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Ngong Ping 360 Cable Car</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Scenic cable car from Tung Chung with stunning mountain views on the way up to Ngong Ping village.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Mid-Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tian Tan Buddha (Big Buddha)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Climb 268 steps to the world's largest outdoor seated bronze Buddha. Visit Po Lin Monastery below.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tai O Fishing Village</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Charming village on stilts – shrimp paste, boat tours, and a chance to spot pink dolphins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-hk-4" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">4</div>
+          <p class="font-headline font-bold">Optional Day</p>
+        </div>
+        <div class="bg-amber-50 rounded-2xl p-4 mb-3 border border-amber-200">
+          <p class="text-amber-800 font-semibold text-sm">✈️ Flight to Seoul tomorrow at 09:45 — pack tonight!</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-outline">Option A</span>
+              <h4 class="font-headline font-semibold mt-0.5">Lamma Island</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Car-free island by ferry — seafood restaurants, hiking trails, and a relaxed local vibe.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-outline">Option B</span>
+              <h4 class="font-headline font-semibold mt-0.5">Macau Day Trip</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">1-hour ferry to the "Las Vegas of Asia" — baroque Portuguese architecture, Ruins of St. Paul's, and casinos.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-outline">Option C</span>
+              <h4 class="font-headline font-semibold mt-0.5">Lantau Hikes</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Sunrise hike to Lantau Peak (934 m) or sections of the Lantau Trail with dramatic coastal views.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SEOUL -->
+  <!-- ============================================================ -->
+  <div id="city-seoul" class="city-panel hidden space-y-5">
+    <div class="relative h-44 rounded-3xl overflow-hidden shadow-sm" style="background:linear-gradient(135deg,#0d1b2a 0%,#1b4f8a 50%,#e63950 100%)">
+      <div class="absolute inset-0 flex flex-col justify-end p-5">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Stop 2 of 5</p>
+            <h2 class="text-white font-headline text-3xl font-bold">Seoul</h2>
+            <p class="text-white/80 text-sm mt-0.5">May 23 – 27 · 5 nights</p>
+          </div>
+          <span class="text-5xl">🇰🇷</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">hotel</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Anteroom Seoul Gangnam</p>
+        <p class="text-on-surface-variant text-[10px]">5 nights</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 23 · 09:45</p>
+        <p class="text-on-surface-variant text-[10px]">From HK</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 28 · 11:10</p>
+        <p class="text-on-surface-variant text-[10px]">→ Shanghai</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival Flight</span>
+          <h3 class="font-headline font-bold text-base mt-0.5">GoToGate · 1108-292-024</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">20 kg hold + backpack carry-on</p>
+        </div>
+        <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">flight</span></div>
+      </div>
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">HKG</p>
+          <p class="font-headline font-bold text-xl">09:45</p>
+          <p class="text-on-surface-variant text-xs">May 23</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center px-3">
+          <div class="w-full flex items-center gap-1">
+            <div class="h-px flex-1 bg-outline-variant"></div>
+            <span class="material-symbols-outlined text-primary text-base">airplanemode_active</span>
+            <div class="h-px flex-1 bg-outline-variant"></div>
+          </div>
+          <p class="text-[10px] text-on-surface-variant mt-1">~3 h 30 m</p>
+        </div>
+        <div class="text-right">
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">ICN</p>
+          <p class="font-headline font-bold text-xl">~14:00</p>
+          <p class="text-on-surface-variant text-xs">May 23</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+      <div class="flex gap-4 items-center">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
+          <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <span class="text-[10px] font-bold text-secondary tracking-widest uppercase">Accommodation</span>
+          <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Hotel Anteroom Seoul Gangnam</h3>
+          <p class="text-on-surface-variant text-xs mt-1">May 23 – 28 · 5 nights · Trip.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
+      <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
+        <button onclick="switchDay('seoul','1')" id="day-seoul-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Sat May 23</button>
+        <button onclick="switchDay('seoul','2')" id="day-seoul-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Sun May 24</button>
+        <button onclick="switchDay('seoul','3')" id="day-seoul-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Mon May 25</button>
+        <button onclick="switchDay('seoul','4')" id="day-seoul-4" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Tue May 26</button>
+        <button onclick="switchDay('seoul','5')" id="day-seoul-5" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Wed May 27</button>
+      </div>
+      <div id="daypanel-seoul-1" class="day-panel space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-headline font-bold text-sm text-on-secondary-container">1</div>
+          <p class="font-headline font-bold">Arrival Day</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Check-in & Gangnam Explore</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Settle into Hotel Anteroom Seoul Gangnam. Explore the upscale Gangnam district — K-drama vibes and bustling streets.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Garosu-gil Street</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Trendy tree-lined boulevard with cafés, boutiques, and some of Seoul's best restaurants for a first dinner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-seoul-2" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">2</div>
+          <p class="font-headline font-bold">Palaces & History</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Gyeongbokgung Palace</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Joseon dynasty's main royal palace. Changing of the Guard at 10 AM and 2 PM. Rent hanbok for free entry!</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Bukchon Hanok Village</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Winding alleys lined with 600-year-old traditional Korean houses. One of Seoul's most photogenic spots.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Late Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Insadong & Cheonggyecheon Stream</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Artsy street with teashops and crafts, then a walk along the restored urban stream.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-seoul-3" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">3</div>
+          <p class="font-headline font-bold">Neighborhoods</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Hongdae</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">University district and center of Seoul's indie music/art scene. Street performances, quirky cafés, vintage shops.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Itaewon</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">International neighborhood with incredible food diversity, Haebangchon hill, and the famous Gyeongnidan-gil.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">N Seoul Tower (Namsan)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Hike or cable car up Namsan for panoramic night views. The iconic "love locks" wall is here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-seoul-4" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">4</div>
+          <p class="font-headline font-bold">Food & Markets</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Gwangjang Market</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Seoul's oldest market — try bindaetteok, mayak gimbap, and raw beef. Famous from Netflix's Street Food.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Myeongdong</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Shopper's paradise — K-beauty stores, street food stalls, fashion. Great for cosmetics and snacks.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Han River Picnic</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Pick up convenience store chicken and head to Yeouido Hangang Park for a classic Seoul river evening.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-seoul-5" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">5</div>
+          <p class="font-headline font-bold">Day Trip</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-outline">Option A · Full Day</span>
+              <h4 class="font-headline font-semibold mt-0.5">DMZ Tour</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Guided tour of the Demilitarized Zone — Imjingak, the 3rd Infiltration Tunnel, Dora Observatory. Book in advance.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-outline">Option B · Full Day</span>
+              <h4 class="font-headline font-semibold mt-0.5">Suwon Hwaseong Fortress</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">UNESCO World Heritage fortress (1796), 1 hour by train. Walk the full 5.7 km wall for great views.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SHANGHAI -->
+  <!-- ============================================================ -->
+  <div id="city-shanghai" class="city-panel hidden space-y-5">
+    <div class="relative h-44 rounded-3xl overflow-hidden shadow-sm" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#d4500c 100%)">
+      <div class="absolute inset-0 flex flex-col justify-end p-5">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Stop 3 of 5</p>
+            <h2 class="text-white font-headline text-3xl font-bold">Shanghai</h2>
+            <p class="text-white/80 text-sm mt-0.5">May 28 – 30 · 2 nights</p>
+          </div>
+          <span class="text-5xl">🌆</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">hotel</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Green Court Residence</p>
+        <p class="text-on-surface-variant text-[10px]">2 nights</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 28 · 12:25</p>
+        <p class="text-on-surface-variant text-[10px]">From Seoul</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 30 · 13:50</p>
+        <p class="text-on-surface-variant text-[10px]">→ Xi'an</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival Flight</span>
+          <h3 class="font-headline font-bold text-base mt-0.5">Booking Flights</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">23 kg hold + backpack carry-on</p>
+        </div>
+        <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">flight</span></div>
+      </div>
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">ICN</p>
+          <p class="font-headline font-bold text-xl">11:10</p>
+          <p class="text-on-surface-variant text-xs">May 28</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center px-3">
+          <div class="w-full flex items-center gap-1">
+            <div class="h-px flex-1 bg-outline-variant"></div>
+            <span class="material-symbols-outlined text-primary text-base">airplanemode_active</span>
+            <div class="h-px flex-1 bg-outline-variant"></div>
+          </div>
+          <p class="text-[10px] text-on-surface-variant mt-1">1 h 15 m</p>
+        </div>
+        <div class="text-right">
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">PVG</p>
+          <p class="font-headline font-bold text-xl">12:25</p>
+          <p class="text-on-surface-variant text-xs">May 28</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+      <div class="flex gap-4 items-center">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
+          <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <span class="text-[10px] font-bold text-secondary tracking-widest uppercase">Accommodation</span>
+          <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Green Court Residence City Center</h3>
+          <p class="text-on-surface-variant text-xs mt-1">May 28 – 31 · 2 nights · Trip.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
+      <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
+        <button onclick="switchDay('shanghai','1')" id="day-shanghai-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Thu May 28</button>
+        <button onclick="switchDay('shanghai','2')" id="day-shanghai-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Fri May 29</button>
+        <button onclick="switchDay('shanghai','3')" id="day-shanghai-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Sat May 30</button>
+      </div>
+      <div id="daypanel-shanghai-1" class="day-panel space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-headline font-bold text-sm text-on-secondary-container">1</div>
+          <p class="font-headline font-bold">Arrival Day</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Check-in & French Concession</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Drop bags and stroll through the leafy streets of the former French Concession — art deco buildings, cafés, boutiques.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">The Bund at Night</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Iconic waterfront promenade facing the Pudong skyline — colonial buildings vs futuristic towers. Unmissable at night.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-shanghai-2" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">2</div>
+          <p class="font-headline font-bold">Culture & Modern China</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Shanghai Museum</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">World-class ancient Chinese art — bronzes, ceramics, calligraphy. Free entry, book online in advance.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Yuyuan Garden & Old Town</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Classical Ming Dynasty garden with zigzag bridges and pavilions. Browse the Old Town bazaar for local food.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Xintiandi</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Upscale entertainment district in restored Shikumen stone-gate houses — great for dinner and drinks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-shanghai-3" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">3</div>
+          <p class="font-headline font-bold">Morning + Departure</p>
+        </div>
+        <div class="bg-amber-50 rounded-2xl p-4 mb-3 border border-amber-200">
+          <p class="text-amber-800 font-semibold text-sm">✈️ Flight to Xi'an at 13:50 — head to airport by 11:30</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-outline">Optional · Early Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Zhujiajiao Water Town</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">1 hour from central Shanghai — ancient canal town with stone bridges and gondola rides. Go early to beat crowds.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">11:30</span>
+              <h4 class="font-headline font-semibold mt-0.5">Head to Airport</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Flight to Xi'an at 13:50 · Trip.com · 20 kg + 7 kg carry-on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- XI'AN -->
+  <!-- ============================================================ -->
+  <div id="city-xian" class="city-panel hidden space-y-5">
+    <div class="relative h-44 rounded-3xl overflow-hidden shadow-sm" style="background:linear-gradient(135deg,#2c1810 0%,#8b4513 60%,#d4a017 100%)">
+      <div class="absolute inset-0 flex flex-col justify-end p-5">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Stop 4 of 5</p>
+            <h2 class="text-white font-headline text-3xl font-bold">Xi'an</h2>
+            <p class="text-white/80 text-sm mt-0.5">May 30 – Jun 2 · 2 nights</p>
+          </div>
+          <span class="text-5xl">🏺</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">hotel</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Zhonglou Yuantuo Hotel</p>
+        <p class="text-on-surface-variant text-[10px]">2 nights</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 30 · 13:50</p>
+        <p class="text-on-surface-variant text-[10px]">From Shanghai</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">train</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">June 2</p>
+        <p class="text-on-surface-variant text-[10px]">→ Beijing</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+      <div class="flex gap-4 items-center">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
+          <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <span class="text-[10px] font-bold text-secondary tracking-widest uppercase">Accommodation</span>
+          <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Xi'an Zhonglou Yuantuo Hotel</h3>
+          <p class="text-on-surface-variant text-xs mt-1">May 31 – Jun 2 · 2 nights · Trip.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
+      <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
+        <button onclick="switchDay('xian','1')" id="day-xian-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Sat May 30</button>
+        <button onclick="switchDay('xian','2')" id="day-xian-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Sun May 31</button>
+        <button onclick="switchDay('xian','3')" id="day-xian-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Mon Jun 1</button>
+      </div>
+      <div id="daypanel-xian-1" class="day-panel space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-headline font-bold text-sm text-on-secondary-container">1</div>
+          <p class="font-headline font-bold">Arrival Evening</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Bell Tower Area</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Your hotel is right by the Bell Tower — the geographic center of ancient Xi'an. A great landmark to orient yourself.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Muslim Quarter (Huimin Jie)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">One of China's best food streets — try roujiamo (Chinese burger), biangbiang noodles, lamb skewers. Visit the Great Mosque.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-xian-2" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">2</div>
+          <p class="font-headline font-bold">Terracotta Army</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Full Day — Go Early!</span>
+              <h4 class="font-headline font-semibold mt-0.5">Terracotta Warriors & Horses</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">UNESCO World Heritage Site — 8,000+ life-size warriors buried with Emperor Qin Shi Huang. Three pits to explore. 1 hour from city. Truly unmissable — one of the world's greatest archaeological wonders.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Xi'an City Wall</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Rent a bike and cycle the complete 14 km Ming Dynasty city wall at sunset. One of China's most complete ancient walls.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-xian-3" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">3</div>
+          <p class="font-headline font-bold">Mount Huashan</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Full Day</span>
+              <h4 class="font-headline font-semibold mt-0.5">Huashan Sacred Mountain</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">One of China's Five Sacred Taoist Mountains. The famous "Plank Walk in the Sky" is an iconic cliff-side trail. Take the cable car up, hike between the five peaks. 1.5 hours from Xi'an by bullet train.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- BEIJING -->
+  <!-- ============================================================ -->
+  <div id="city-beijing" class="city-panel hidden space-y-5">
+    <div class="relative h-44 rounded-3xl overflow-hidden shadow-sm" style="background:linear-gradient(135deg,#1a0000 0%,#8b0000 50%,#c9a227 100%)">
+      <div class="absolute inset-0 flex flex-col justify-end p-5">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Stop 5 of 5</p>
+            <h2 class="text-white font-headline text-3xl font-bold">Beijing</h2>
+            <p class="text-white/80 text-sm mt-0.5">Jun 2 – 5 · 4 nights</p>
+          </div>
+          <span class="text-5xl">🏯</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">hotel</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Bolly Wood Hotel Wangfujing</p>
+        <p class="text-on-surface-variant text-[10px]">4 nights</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">train</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">June 2</p>
+        <p class="text-on-surface-variant text-[10px]">From Xi'an</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+        <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">Jun 5 · 19:50</p>
+        <p class="text-on-surface-variant text-[10px]">→ Warsaw</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival · High-Speed Train</span>
+          <h3 class="font-headline font-bold text-base mt-0.5">Xi'an → Beijing</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">~4.5 hours · Book via Trip.com or 12306.cn</p>
+        </div>
+        <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">train</span></div>
+      </div>
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">XIY</p>
+          <p class="font-headline font-bold text-xl">~08:00</p>
+          <p class="text-on-surface-variant text-xs">Jun 2</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center px-3">
+          <div class="w-full flex items-center gap-1">
+            <div class="h-px flex-1 bg-outline-variant"></div>
+            <span class="material-symbols-outlined text-primary text-base">train</span>
+            <div class="h-px flex-1 bg-outline-variant"></div>
+          </div>
+          <p class="text-[10px] text-on-surface-variant mt-1">~4 h 30 m</p>
+        </div>
+        <div class="text-right">
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">BJS</p>
+          <p class="font-headline font-bold text-xl">~12:30</p>
+          <p class="text-on-surface-variant text-xs">Jun 2</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+      <div class="flex gap-4 items-center">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
+          <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <span class="text-[10px] font-bold text-secondary tracking-widest uppercase">Accommodation</span>
+          <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Bolly Wood Hotel — Wangfujing / Palace Museum</h3>
+          <p class="text-on-surface-variant text-xs mt-1">Jun 2 – 5 · 4 nights · Trip.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary/5 rounded-3xl p-5 border border-primary/20">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Return Flight Home</span>
+          <h3 class="font-headline font-bold text-base mt-0.5">Etihad · Ref: 8Z4DFE</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">EY889 + EY159 · 25 kg + 7 kg carry-on</p>
+        </div>
+        <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">home</span></div>
+      </div>
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">PEK</p>
+          <p class="font-headline font-bold text-xl">19:50</p>
+          <p class="text-on-surface-variant text-xs">Jun 5</p>
+        </div>
+        <div class="flex-1 flex flex-col items-center px-3">
+          <div class="w-full flex items-center gap-1">
+            <div class="h-px flex-1 bg-outline-variant"></div>
+            <span class="material-symbols-outlined text-primary text-base">airplanemode_active</span>
+            <div class="h-px flex-1 bg-outline-variant"></div>
+          </div>
+          <p class="text-[10px] text-on-surface-variant mt-1">Via Abu Dhabi</p>
+        </div>
+        <div class="text-right">
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">WAW</p>
+          <p class="font-headline font-bold text-xl">~10:00</p>
+          <p class="text-on-surface-variant text-xs">Jun 6</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
+      <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
+        <button onclick="switchDay('beijing','1')" id="day-beijing-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Tue Jun 2</button>
+        <button onclick="switchDay('beijing','2')" id="day-beijing-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Wed Jun 3</button>
+        <button onclick="switchDay('beijing','3')" id="day-beijing-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Thu Jun 4</button>
+        <button onclick="switchDay('beijing','4')" id="day-beijing-4" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Fri Jun 5</button>
+      </div>
+      <div id="daypanel-beijing-1" class="day-panel space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-headline font-bold text-sm text-on-secondary-container">1</div>
+          <p class="font-headline font-bold">Arrival & Wangfujing</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Check-in & Wangfujing Street</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Beijing's famous shopping street — right next to your hotel. Try scorpion-on-a-stick at Donghuamen Night Market.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tiananmen Square at Dusk</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A short walk from the hotel — see the vast square lit up at dusk and admire the scale of this historic plaza.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-beijing-2" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">2</div>
+          <p class="font-headline font-bold">Forbidden City</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning — Book Tickets Online!</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tiananmen Square & Forbidden City</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">World's largest imperial palace — 980 buildings, 8,704 rooms. Allow 3+ hours. Pre-book on Palace Museum website — essential, sells out fast.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Jingshan Park</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Hill directly behind the Forbidden City — climb for the best aerial view of the entire palace complex.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Hutong Dinner</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore Nanluoguxiang or Wudaoying Hutong for traditional Beijing cuisine in the ancient alleyways.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-beijing-3" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">3</div>
+          <p class="font-headline font-bold">The Great Wall</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Full Day</span>
+              <h4 class="font-headline font-semibold mt-0.5">Mutianyu Great Wall</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Most scenic and least-crowded restored section. Optional toboggan ride down! ~1.5 hours from Beijing. Spend 3+ hours walking the wall between watchtowers.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Evening</span>
+              <h4 class="font-headline font-semibold mt-0.5">Peking Duck Dinner</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">You've earned it! Try Quanjude or Da Dong — crispy skin, thin pancakes, hoisin sauce. Beijing's most iconic dish.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="daypanel-beijing-4" class="day-panel hidden space-y-4">
+        <div class="flex items-center gap-2 mb-1">
+          <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">4</div>
+          <p class="font-headline font-bold">Last Day & Departure</p>
+        </div>
+        <div class="bg-amber-50 rounded-2xl p-4 mb-3 border border-amber-200">
+          <p class="text-amber-800 font-semibold text-sm">✈️ Flight home at 19:50 — head to PEK airport by 17:00</p>
+        </div>
+        <div class="pl-10 space-y-6 relative">
+          <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Morning</span>
+              <h4 class="font-headline font-semibold mt-0.5">Summer Palace</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">UNESCO imperial garden on Kunming Lake. Stroll the Long Corridor, rent a rowboat, visit the Marble Boat.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <h4 class="font-headline font-semibold mt-0.5">Last Hutong Walk</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A final wander through the ancient alleyways — tea house, street food, last souvenirs.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">17:00</span>
+              <h4 class="font-headline font-semibold mt-0.5">Head to PEK Airport</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">EY889 → Abu Dhabi → EY159 → Warsaw. Arrival June 6. Ref: 8Z4DFE · 25 kg + 7 kg carry-on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+function switchCity(city) {
+  document.querySelectorAll('.city-panel').forEach(p => p.classList.add('hidden'));
+  document.querySelectorAll('.city-tab').forEach(t => {
+    t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+    t.classList.add('bg-surface-container', 'text-on-surface-variant', 'font-medium');
+  });
+  document.getElementById('city-' + city).classList.remove('hidden');
+  const tab = document.getElementById('tab-' + city);
+  tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+  tab.classList.remove('bg-surface-container', 'text-on-surface-variant', 'font-medium');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function switchDay(city, day) {
+  document.querySelectorAll('#city-' + city + ' .day-panel').forEach(p => p.classList.add('hidden'));
+  document.querySelectorAll('#city-' + city + ' .day-tab').forEach(t => {
+    t.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+    t.classList.add('bg-surface-container', 'text-on-surface-variant', 'font-medium');
+  });
+  document.getElementById('daypanel-' + city + '-' + day).classList.remove('hidden');
+  const tab = document.getElementById('day-' + city + '-' + day);
+  tab.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+  tab.classList.remove('bg-surface-container', 'text-on-surface-variant', 'font-medium');
+}
+</script>
+</body>
+</html>
