@@ -130,29 +130,29 @@ tailwind.config = {
     </div>
 
     <div class="grid grid-cols-3 gap-3">
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      <button onclick="showHotel('hk')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">hotel</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">The Salisbury YMCA</p>
         <p class="text-on-surface-variant text-[10px]">4 nights</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('outbound')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 18 · 11:50</p>
         <p class="text-on-surface-variant text-[10px]">Etihad EY160/870</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('hk_seoul')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 23 · 09:45</p>
         <p class="text-on-surface-variant text-[10px]">→ Seoul</p>
-      </div>
+      </button>
     </div>
 
-    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+    <button onclick="showFlight('outbound')" class="w-full text-left bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container active:scale-[0.98] transition-transform">
       <div class="flex justify-between items-start mb-4">
         <div>
           <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival Flight</span>
-          <h3 class="font-headline font-bold text-base mt-0.5">Etihad · Ref: 8Z4DFE</h3>
-          <p class="text-on-surface-variant text-xs mt-0.5">EY160 + EY870 · 25 kg + 7 kg carry-on</p>
+          <h3 class="font-headline font-bold text-base mt-0.5">Etihad · EY160 + EY870</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">25 kg + 7 kg carry-on · tap for details</p>
         </div>
         <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">flight</span></div>
       </div>
@@ -176,9 +176,9 @@ tailwind.config = {
           <p class="text-on-surface-variant text-xs">May 19</p>
         </div>
       </div>
-    </div>
+    </button>
 
-    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+    <button onclick="showHotel('hk')" class="w-full text-left bg-surface-container-low rounded-3xl p-5 shadow-sm active:scale-[0.98] transition-transform">
       <div class="flex gap-4 items-center">
         <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
           <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
@@ -188,8 +188,9 @@ tailwind.config = {
           <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">The Salisbury YMCA of Hong Kong</h3>
           <p class="text-on-surface-variant text-xs mt-1">May 19 – 23 · 4 nights · Trip.com</p>
         </div>
+        <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
-    </div>
+    </button>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -355,29 +356,29 @@ tailwind.config = {
     </div>
 
     <div class="grid grid-cols-3 gap-3">
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      <button onclick="showHotel('seoul')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">hotel</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Anteroom Seoul Gangnam</p>
         <p class="text-on-surface-variant text-[10px]">5 nights</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('hk_seoul')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 23 · 09:45</p>
         <p class="text-on-surface-variant text-[10px]">From HK</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('seoul_shanghai')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 28 · 11:10</p>
         <p class="text-on-surface-variant text-[10px]">→ Shanghai</p>
-      </div>
+      </button>
     </div>
 
-    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+    <button onclick="showFlight('hk_seoul')" class="w-full text-left bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container active:scale-[0.98] transition-transform">
       <div class="flex justify-between items-start mb-4">
         <div>
           <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival Flight</span>
-          <h3 class="font-headline font-bold text-base mt-0.5">GoToGate · 1108-292-024</h3>
-          <p class="text-on-surface-variant text-xs mt-0.5">20 kg hold + backpack carry-on</p>
+          <h3 class="font-headline font-bold text-base mt-0.5">Hong Kong → Seoul</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">20 kg hold + backpack · tap for details</p>
         </div>
         <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">flight</span></div>
       </div>
@@ -401,9 +402,9 @@ tailwind.config = {
           <p class="text-on-surface-variant text-xs">May 23</p>
         </div>
       </div>
-    </div>
+    </button>
 
-    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+    <button onclick="showHotel('seoul')" class="w-full text-left bg-surface-container-low rounded-3xl p-5 shadow-sm active:scale-[0.98] transition-transform">
       <div class="flex gap-4 items-center">
         <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
           <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
@@ -413,8 +414,9 @@ tailwind.config = {
           <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Hotel Anteroom Seoul Gangnam</h3>
           <p class="text-on-surface-variant text-xs mt-1">May 23 – 28 · 5 nights · Trip.com</p>
         </div>
+        <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
-    </div>
+    </button>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -595,29 +597,29 @@ tailwind.config = {
     </div>
 
     <div class="grid grid-cols-3 gap-3">
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      <button onclick="showHotel('shanghai')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">hotel</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Green Court Residence</p>
         <p class="text-on-surface-variant text-[10px]">2 nights</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('seoul_shanghai')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 28 · 12:25</p>
         <p class="text-on-surface-variant text-[10px]">From Seoul</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('shanghai_xian')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 30 · 13:50</p>
         <p class="text-on-surface-variant text-[10px]">→ Xi'an</p>
-      </div>
+      </button>
     </div>
 
-    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+    <button onclick="showFlight('seoul_shanghai')" class="w-full text-left bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container active:scale-[0.98] transition-transform">
       <div class="flex justify-between items-start mb-4">
         <div>
           <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival Flight</span>
-          <h3 class="font-headline font-bold text-base mt-0.5">Booking Flights</h3>
-          <p class="text-on-surface-variant text-xs mt-0.5">23 kg hold + backpack carry-on</p>
+          <h3 class="font-headline font-bold text-base mt-0.5">Seoul → Shanghai</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">23 kg hold + backpack · tap for details</p>
         </div>
         <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">flight</span></div>
       </div>
@@ -641,9 +643,9 @@ tailwind.config = {
           <p class="text-on-surface-variant text-xs">May 28</p>
         </div>
       </div>
-    </div>
+    </button>
 
-    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+    <button onclick="showHotel('shanghai')" class="w-full text-left bg-surface-container-low rounded-3xl p-5 shadow-sm active:scale-[0.98] transition-transform">
       <div class="flex gap-4 items-center">
         <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
           <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
@@ -653,8 +655,9 @@ tailwind.config = {
           <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Green Court Residence City Center</h3>
           <p class="text-on-surface-variant text-xs mt-1">May 28 – 31 · 2 nights · Trip.com</p>
         </div>
+        <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
-    </div>
+    </button>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -770,24 +773,24 @@ tailwind.config = {
     </div>
 
     <div class="grid grid-cols-3 gap-3">
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      <button onclick="showHotel('xian')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">hotel</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Zhonglou Yuantuo Hotel</p>
         <p class="text-on-surface-variant text-[10px]">2 nights</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('shanghai_xian')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 30 · 13:50</p>
         <p class="text-on-surface-variant text-[10px]">From Shanghai</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('xian_beijing')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">train</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">June 2</p>
         <p class="text-on-surface-variant text-[10px]">→ Beijing</p>
-      </div>
+      </button>
     </div>
 
-    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+    <button onclick="showHotel('xian')" class="w-full text-left bg-surface-container-low rounded-3xl p-5 shadow-sm active:scale-[0.98] transition-transform">
       <div class="flex gap-4 items-center">
         <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
           <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
@@ -797,8 +800,9 @@ tailwind.config = {
           <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Xi'an Zhonglou Yuantuo Hotel</h3>
           <p class="text-on-surface-variant text-xs mt-1">May 31 – Jun 2 · 2 nights · Trip.com</p>
         </div>
+        <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
-    </div>
+    </button>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -895,29 +899,29 @@ tailwind.config = {
     </div>
 
     <div class="grid grid-cols-3 gap-3">
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      <button onclick="showHotel('beijing')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">hotel</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1 leading-tight">Bolly Wood Hotel Wangfujing</p>
         <p class="text-on-surface-variant text-[10px]">4 nights</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('xian_beijing')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">train</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">June 2</p>
         <p class="text-on-surface-variant text-[10px]">From Xi'an</p>
-      </div>
-      <div class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container">
+      </button>
+      <button onclick="showFlight('return')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_takeoff</span>
         <p class="text-on-surface font-headline font-semibold text-xs mt-1">Jun 5 · 19:50</p>
         <p class="text-on-surface-variant text-[10px]">→ Warsaw</p>
-      </div>
+      </button>
     </div>
 
-    <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container">
+    <button onclick="showFlight('xian_beijing')" class="w-full text-left bg-surface-container-lowest rounded-3xl p-5 shadow-sm border border-surface-container active:scale-[0.98] transition-transform">
       <div class="flex justify-between items-start mb-4">
         <div>
           <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Arrival · High-Speed Train</span>
           <h3 class="font-headline font-bold text-base mt-0.5">Xi'an → Beijing</h3>
-          <p class="text-on-surface-variant text-xs mt-0.5">~4.5 hours · Book via Trip.com or 12306.cn</p>
+          <p class="text-on-surface-variant text-xs mt-0.5">~4.5 hours · tap for details</p>
         </div>
         <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">train</span></div>
       </div>
@@ -941,9 +945,9 @@ tailwind.config = {
           <p class="text-on-surface-variant text-xs">Jun 2</p>
         </div>
       </div>
-    </div>
+    </button>
 
-    <div class="bg-surface-container-low rounded-3xl p-5 shadow-sm">
+    <button onclick="showHotel('beijing')" class="w-full text-left bg-surface-container-low rounded-3xl p-5 shadow-sm active:scale-[0.98] transition-transform">
       <div class="flex gap-4 items-center">
         <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-none">
           <span class="material-symbols-outlined text-primary text-2xl">hotel</span>
@@ -953,15 +957,16 @@ tailwind.config = {
           <h3 class="font-headline font-bold text-on-surface text-sm leading-tight mt-0.5">Bolly Wood Hotel — Wangfujing / Palace Museum</h3>
           <p class="text-on-surface-variant text-xs mt-1">Jun 2 – 5 · 4 nights · Trip.com</p>
         </div>
+        <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
-    </div>
+    </button>
 
-    <div class="bg-primary/5 rounded-3xl p-5 border border-primary/20">
+    <button onclick="showFlight('return')" class="w-full text-left bg-primary/5 rounded-3xl p-5 border border-primary/20 active:scale-[0.98] transition-transform">
       <div class="flex justify-between items-start mb-4">
         <div>
           <span class="text-[10px] font-bold text-primary tracking-widest uppercase">Return Flight Home</span>
-          <h3 class="font-headline font-bold text-base mt-0.5">Etihad · Ref: 8Z4DFE</h3>
-          <p class="text-on-surface-variant text-xs mt-0.5">EY889 + EY159 · 25 kg + 7 kg carry-on</p>
+          <h3 class="font-headline font-bold text-base mt-0.5">Etihad · EY889 + EY159</h3>
+          <p class="text-on-surface-variant text-xs mt-0.5">25 kg + 7 kg carry-on · tap for details</p>
         </div>
         <div class="bg-primary/10 p-2 rounded-xl"><span class="material-symbols-outlined text-primary">home</span></div>
       </div>
@@ -985,7 +990,7 @@ tailwind.config = {
           <p class="text-on-surface-variant text-xs">Jun 6</p>
         </div>
       </div>
-    </div>
+    </button>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -1144,6 +1149,371 @@ function switchDay(city, day) {
   tab.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
   tab.classList.remove('bg-surface-container', 'text-on-surface-variant', 'font-medium');
 }
+</script>
+
+<!-- ============================================================ -->
+<!-- DETAIL DRAWER -->
+<!-- ============================================================ -->
+<div id="drawer-overlay" onclick="closeDrawer()" class="fixed inset-0 bg-black/40 z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+<div id="drawer" class="fixed bottom-0 left-0 right-0 z-[70] bg-surface rounded-t-[2rem] shadow-2xl translate-y-full transition-transform duration-300 ease-out max-h-[92dvh] flex flex-col">
+  <div class="flex items-center justify-between px-6 pt-5 pb-3 flex-none">
+    <div class="w-10 h-1 rounded-full bg-outline-variant mx-auto absolute left-1/2 -translate-x-1/2 top-3"></div>
+    <button onclick="closeDrawer()" class="w-9 h-9 rounded-full flex items-center justify-center bg-surface-container ml-auto">
+      <span class="material-symbols-outlined text-on-surface-variant text-lg">close</span>
+    </button>
+  </div>
+  <div id="drawer-content" class="overflow-y-auto px-6 pb-10 space-y-6 flex-1"></div>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+
+const HOTELS = {
+  hk: {
+    name: "The Salisbury – YMCA of Hong Kong",
+    stars: 4,
+    address: "41 Salisbury Road, Tsim Sha Tsui, Kowloon, Hong Kong",
+    maps: {
+      google: "https://www.google.com/maps/search/?api=1&query=The+Salisbury+YMCA+41+Salisbury+Road+Tsim+Sha+Tsui+Hong+Kong",
+      apple: "https://maps.apple.com/?q=The+Salisbury+YMCA+41+Salisbury+Road+Tsim+Sha+Tsui+Hong+Kong",
+      amap: "https://www.amap.com/search?query=The+Salisbury+YMCA+Hong+Kong"
+    },
+    neighborhood: "Tsim Sha Tsui (TST) is Kowloon's premier waterfront district, right on Victoria Harbour. One of Hong Kong's most walkable areas — shopping malls, museums, dining, and the Star Ferry all within a few minutes on foot.",
+    amenities: ["Indoor pool & jacuzzi","Fitness center","Squash, badminton & basketball courts","Rock climbing wall","Spa & sauna","On-site restaurant & café","Free high-speed WiFi","Baggage storage","Currency exchange","Laundry & dry cleaning"],
+    nearby: [
+      { name: "Star Ferry Terminal", dist: "3 min walk" },
+      { name: "Avenue of Stars", dist: "3 min walk" },
+      { name: "Tsim Sha Tsui MTR", dist: "4 min walk" },
+      { name: "Hong Kong Space Museum", dist: "5 min walk" },
+      { name: "Temple Street Night Market", dist: "15 min walk" },
+    ],
+    note: "Select rooms face Victoria Harbour — great for the nightly Symphony of Lights laser show at 8 PM.",
+    emoji: "🇭🇰"
+  },
+  seoul: {
+    name: "Hotel Anteroom Seoul Gangnam",
+    stars: 3,
+    address: "153 Dosan-daero, Sinsa-dong, Gangnam-gu, Seoul, South Korea",
+    maps: {
+      google: "https://www.google.com/maps/search/?api=1&query=Hotel+Anteroom+Seoul+153+Dosan-daero+Sinsa-dong+Gangnam-gu+Seoul",
+      apple: "https://maps.apple.com/?q=Hotel+Anteroom+Seoul+153+Dosan-daero+Gangnam+Seoul",
+      amap: "https://www.amap.com/search?query=Hotel+Anteroom+Seoul+Gangnam"
+    },
+    neighborhood: "Sinsa-dong is home to Garosu-gil ('tree-lined road'), one of Seoul's most fashionable streets. Independent cafés, boutique fashion, art galleries, and great restaurants set among ginkgo trees.",
+    amenities: ["Rooftop bar 'Tellers 9.5' (Han River & Namsan views)","On-site restaurant (Korean cuisine)","Rotating art gallery exhibition","Free WiFi","Laptop-friendly workspaces in all rooms","Bathrobes","Multilingual staff","Laundry & dry cleaning"],
+    nearby: [
+      { name: "Garosu-gil", dist: "4 min walk" },
+      { name: "Sinsa Station (Line 3)", dist: "10 min walk" },
+      { name: "Dosan Park", dist: "10 min walk" },
+      { name: "Apgujeong Rodeo Street", dist: "15 min walk" },
+      { name: "COEX Mall", dist: "~15 min by metro" },
+    ],
+    note: "Featured in the Michelin Guide. The rooftop bar is worth a visit even just for the views over Seoul.",
+    emoji: "🇰🇷"
+  },
+  shanghai: {
+    name: "Green Court Residence City Center",
+    stars: 4,
+    address: "No. 55 Beijing West Road, Huangpu District, Shanghai, China",
+    maps: {
+      google: "https://www.google.com/maps/search/?api=1&query=Green+Court+Residence+55+Beijing+West+Road+Huangpu+Shanghai",
+      apple: "https://maps.apple.com/?q=Green+Court+Residence+55+West+Beijing+Road+Shanghai",
+      amap: "https://uri.amap.com/marker?name=Green+Court+Residence&position=121.4737,31.2304"
+    },
+    neighborhood: "Sits at the edge of People's Square — Shanghai's geographic center. Close to the Shanghai Museum, Grand Theatre, and Nanjing Road. Metro Lines 1, 2, 8 and 10 all nearby.",
+    amenities: ["Fitness center","On-site restaurant","Free WiFi","In-unit kitchenette (fridge, stovetop, microwave)","Breakfast buffet","Business center","Airport transfers","Laundry & dry cleaning","Concierge & tour desk"],
+    nearby: [
+      { name: "People's Square Metro", dist: "7 min walk" },
+      { name: "Nanjing Road Pedestrian St.", dist: "10 min walk" },
+      { name: "Shanghai Museum", dist: "15 min walk" },
+      { name: "The Bund", dist: "20 min walk" },
+      { name: "Yu Garden / Old Town", dist: "~3 km" },
+    ],
+    note: "Rated #1 aparthotel in Shanghai on TripAdvisor. Full kitchen in-unit — great for light breakfasts or late-night snacks.",
+    emoji: "🌆"
+  },
+  xian: {
+    name: "Xi'an Zhonglou Yuantuo Hotel",
+    stars: 4,
+    address: "No. 290 West 1st Road, Xincheng District, Xi'an, Shaanxi, China",
+    maps: {
+      google: "https://www.google.com/maps/search/?api=1&query=Xi+an+Zhonglou+Yuantuo+Hotel+290+West+1st+Road+Xincheng+Xian",
+      apple: "https://maps.apple.com/?q=Zhonglou+Yuantuo+Hotel+290+West+1st+Road+Xian+Shaanxi",
+      amap: "https://uri.amap.com/marker?name=钟楼原拓酒店&position=108.9402,34.2601"
+    },
+    neighborhood: "The Bell Tower (Zhonglou) district is the historic heart of Xi'an. The Muslim Quarter, Drum Tower, and City Wall are all within walking distance. Hotel sits directly above Zhonglou Metro Station.",
+    amenities: ["Restaurant (breakfast included — Chinese & Western buffet)","Gym","Free laundry facilities (Floor 3)","Free WiFi","24/7 complimentary tea service","Smart toilets & air purifiers","Dyson hair dryers","Complimentary Hanfu costume experience","Robot delivery service","Airport transfers"],
+    nearby: [
+      { name: "Bell Tower", dist: "2 min walk" },
+      { name: "Drum Tower", dist: "5 min walk" },
+      { name: "Muslim Quarter (Huimin Jie)", dist: "8 min walk" },
+      { name: "Zhonglou Metro (Lines 2 & 6)", dist: "Direct access" },
+      { name: "City Wall", dist: "1 metro stop" },
+    ],
+    note: "Rated 9.4/10 Outstanding on Trip.com. The Hanfu costume experience is free — a fun activity right at the hotel.",
+    emoji: "🏺"
+  },
+  beijing: {
+    name: "Bolly Wood Hotel – Wangfujing / Palace Museum",
+    stars: 3,
+    address: "No. 189 Dongsi South Street, Dongcheng District, Beijing, China",
+    maps: {
+      google: "https://www.google.com/maps/search/?api=1&query=Bolly+Wood+Hotel+189+Dongsi+South+Street+Dongcheng+Beijing",
+      apple: "https://maps.apple.com/?q=Bolly+Wood+Hotel+189+Dongsi+South+Street+Dongcheng+Beijing",
+      amap: "https://uri.amap.com/marker?name=Bolly+Wood+Hotel&position=116.4174,39.9227"
+    },
+    neighborhood: "Dongcheng is Beijing's historic inner city. Between Wangfujing shopping street to the west and traditional Dongsi hutong neighborhoods to the north. Metro Lines 1 & 5 at Dongdan Station just 500 m away.",
+    amenities: ["On-site restaurant","Fitness center","Free WiFi","In-room mini fridge, safe & kettle","Breakfast service","Robot delivery service","Multilingual front desk","Taxi booking","Luggage storage"],
+    nearby: [
+      { name: "Wangfujing Street", dist: "8 min walk" },
+      { name: "Dongdan Station (Lines 1 & 5)", dist: "7 min walk" },
+      { name: "Forbidden City / Palace Museum", dist: "~2 km" },
+      { name: "Tiananmen Square", dist: "~2 km" },
+      { name: "Beijing Railway Station", dist: "~1.5 km" },
+    ],
+    note: "Ideal sightseeing base — Line 1 metro connects directly to Tiananmen and Chang'an Avenue in minutes.",
+    emoji: "🏯"
+  }
+};
+
+const FLIGHTS = {
+  outbound: {
+    label: "Warsaw → Hong Kong",
+    airline: "Etihad Airways",
+    route: [
+      { from: "WAW", fromCity: "Warsaw Chopin", dep: "11:50", date: "18 May", to: "AUH", toCity: "Abu Dhabi", arr: "~21:00", flight: "EY160" },
+      { from: "AUH", fromCity: "Abu Dhabi", dep: "~23:30", date: "18 May", to: "HKG", toCity: "Hong Kong Intl", arr: "~13:00", flight: "EY870", note: "+1 day" }
+    ],
+    baggage: "25 kg hold + 7 kg carry-on",
+    emoji: "✈️"
+  },
+  hk_seoul: {
+    label: "Hong Kong → Seoul",
+    airline: "GoToGate booking",
+    route: [
+      { from: "HKG", fromCity: "Hong Kong Intl", dep: "09:45", date: "23 May", to: "ICN", toCity: "Seoul Incheon", arr: "~14:00", flight: "See GoToGate confirmation" }
+    ],
+    baggage: "20 kg hold + backpack carry-on",
+    emoji: "✈️"
+  },
+  seoul_shanghai: {
+    label: "Seoul → Shanghai",
+    airline: "Booking Flights",
+    route: [
+      { from: "ICN", fromCity: "Seoul Incheon", dep: "11:10", date: "28 May", to: "PVG", toCity: "Shanghai Pudong", arr: "12:25", flight: "See booking confirmation" }
+    ],
+    baggage: "23 kg hold + backpack carry-on",
+    emoji: "✈️"
+  },
+  shanghai_xian: {
+    label: "Shanghai → Xi'an",
+    airline: "Trip.com Flights",
+    route: [
+      { from: "PVG", fromCity: "Shanghai Pudong", dep: "13:50", date: "30 May", to: "XIY", toCity: "Xi'an Xianyang", arr: "~16:00", flight: "See Trip.com confirmation" }
+    ],
+    baggage: "20 kg hold + 7 kg carry-on",
+    emoji: "✈️"
+  },
+  xian_beijing: {
+    label: "Xi'an → Beijing",
+    type: "High-Speed Train",
+    route: [
+      { from: "XIY North", fromCity: "Xi'an North Railway Stn", dep: "TBC", date: "2 Jun", to: "BJW", toCity: "Beijing West or South Stn", arr: "~4.5 h later", flight: "Book via Trip.com or 12306.cn" }
+    ],
+    baggage: "All luggage allowed onboard",
+    note: "High-speed G-train, ~4.5 hours. Book seat class D or G train. Book as early as possible — fills up.",
+    emoji: "🚄"
+  },
+  return: {
+    label: "Beijing → Warsaw",
+    airline: "Etihad Airways",
+    route: [
+      { from: "PEK", fromCity: "Beijing Capital Intl", dep: "19:50", date: "5 Jun", to: "AUH", toCity: "Abu Dhabi", arr: "~00:30", flight: "EY889", note: "+1 day" },
+      { from: "AUH", fromCity: "Abu Dhabi", dep: "~02:00", date: "6 Jun", to: "WAW", toCity: "Warsaw Chopin", arr: "~07:00", flight: "EY159" }
+    ],
+    baggage: "25 kg hold + 7 kg carry-on",
+    emoji: "🏠"
+  }
+};
+
+// ── DRAWER ENGINE ─────────────────────────────────────────────────────────────
+
+function openDrawer(html) {
+  document.getElementById('drawer-content').innerHTML = html;
+  const overlay = document.getElementById('drawer-overlay');
+  const drawer = document.getElementById('drawer');
+  overlay.classList.remove('hidden');
+  requestAnimationFrame(() => {
+    overlay.classList.remove('opacity-0');
+    drawer.classList.remove('translate-y-full');
+  });
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  const overlay = document.getElementById('drawer-overlay');
+  const drawer = document.getElementById('drawer');
+  overlay.classList.add('opacity-0');
+  drawer.classList.add('translate-y-full');
+  setTimeout(() => {
+    overlay.classList.add('hidden');
+    document.getElementById('drawer-content').innerHTML = '';
+    document.body.style.overflow = '';
+  }, 300);
+}
+
+// ── HOTEL DRAWER ──────────────────────────────────────────────────────────────
+
+function showHotel(cityKey) {
+  const h = HOTELS[cityKey];
+  const stars = '★'.repeat(h.stars) + '☆'.repeat(5 - h.stars);
+  const amenityHTML = h.amenities.map(a =>
+    `<div class="flex items-center gap-2 py-2 border-b border-surface-container last:border-0">
+      <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+      <span class="text-sm text-on-surface">${a}</span>
+    </div>`
+  ).join('');
+  const nearbyHTML = h.nearby.map(n =>
+    `<div class="flex justify-between items-center py-2 border-b border-surface-container last:border-0">
+      <span class="text-sm text-on-surface">${n.name}</span>
+      <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">${n.dist}</span>
+    </div>`
+  ).join('');
+
+  openDrawer(`
+    <div class="flex items-start gap-3">
+      <span class="text-4xl">${h.emoji}</span>
+      <div>
+        <p class="text-xs font-bold text-primary uppercase tracking-widest mb-0.5">Accommodation</p>
+        <h2 class="font-headline font-bold text-xl text-on-surface leading-tight">${h.name}</h2>
+        <p class="text-amber-500 text-sm mt-0.5">${stars}</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-low rounded-2xl p-4 space-y-3">
+      <div class="flex items-start gap-2">
+        <span class="material-symbols-outlined text-primary text-base mt-0.5">location_on</span>
+        <p class="text-sm text-on-surface-variant">${h.address}</p>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <a href="${h.maps.google}" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-surface-container-high text-xs font-semibold text-on-surface shadow-sm active:scale-95 transition-transform">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#EA4335"/><circle cx="12" cy="9" r="2.5" fill="white"/></svg>
+          Google Maps
+        </a>
+        <a href="${h.maps.apple}" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-surface-container-high text-xs font-semibold text-on-surface shadow-sm active:scale-95 transition-transform">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#007AFF"/><circle cx="12" cy="9" r="2.5" fill="white"/></svg>
+          Apple Maps
+        </a>
+        <a href="${h.maps.amap}" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-surface-container-high text-xs font-semibold text-on-surface shadow-sm active:scale-95 transition-transform">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#0088FF"/><circle cx="12" cy="9" r="2.5" fill="white"/></svg>
+          Amap 高德
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-semibold text-base mb-2">Neighborhood</h3>
+      <p class="text-sm text-on-surface-variant leading-relaxed">${h.neighborhood}</p>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-semibold text-base mb-2">Amenities</h3>
+      <div class="bg-surface-container-lowest rounded-2xl px-4 divide-y divide-surface-container">
+        ${amenityHTML}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-semibold text-base mb-2">Nearby</h3>
+      <div class="bg-surface-container-lowest rounded-2xl px-4">
+        ${nearbyHTML}
+      </div>
+    </div>
+
+    ${h.note ? `<div class="bg-primary/8 border border-primary/20 rounded-2xl p-4 flex gap-3">
+      <span class="material-symbols-outlined text-primary text-base mt-0.5">lightbulb</span>
+      <p class="text-sm text-on-surface leading-relaxed">${h.note}</p>
+    </div>` : ''}
+  `);
+}
+
+// ── FLIGHT DRAWER ─────────────────────────────────────────────────────────────
+
+function showFlight(flightKey) {
+  const f = FLIGHTS[flightKey];
+  const segmentsHTML = f.route.map((seg, i) => `
+    <div class="relative ${i < f.route.length - 1 ? 'pb-6' : ''}">
+      ${i < f.route.length - 1 ? '<div class="absolute left-5 top-12 bottom-0 w-px bg-surface-container-high"></div>' : ''}
+      <div class="bg-surface-container-lowest rounded-2xl p-4 border border-surface-container">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-base">${f.type === 'High-Speed Train' ? 'train' : 'flight'}</span>
+          </div>
+          <div>
+            <p class="font-headline font-bold text-sm">${seg.flight}</p>
+            <p class="text-xs text-on-surface-variant">${seg.date}</p>
+          </div>
+          ${seg.note ? `<span class="ml-auto text-xs font-bold text-secondary bg-secondary-container px-2 py-0.5 rounded-full">${seg.note}</span>` : ''}
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-headline font-bold text-2xl">${seg.from}</p>
+            <p class="text-xs text-on-surface-variant leading-tight">${seg.fromCity}</p>
+            <p class="font-semibold text-sm mt-1">${seg.dep}</p>
+          </div>
+          <div class="flex-1 flex items-center px-4">
+            <div class="w-full flex items-center gap-1">
+              <div class="h-px flex-1 border-t-2 border-dashed border-outline-variant"></div>
+              <span class="material-symbols-outlined text-primary text-sm">${f.type === 'High-Speed Train' ? 'train' : 'airplanemode_active'}</span>
+              <div class="h-px flex-1 border-t-2 border-dashed border-outline-variant"></div>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-headline font-bold text-2xl">${seg.to}</p>
+            <p class="text-xs text-on-surface-variant leading-tight">${seg.toCity}</p>
+            <p class="font-semibold text-sm mt-1">${seg.arr}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  openDrawer(`
+    <div class="flex items-start gap-3">
+      <span class="text-4xl">${f.emoji}</span>
+      <div>
+        <p class="text-xs font-bold text-primary uppercase tracking-widest mb-0.5">${f.type || 'Flight'}</p>
+        <h2 class="font-headline font-bold text-xl text-on-surface leading-tight">${f.label}</h2>
+        <p class="text-on-surface-variant text-sm mt-0.5">${f.airline || f.type}</p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-headline font-semibold text-base mb-3">Route</h3>
+      ${segmentsHTML}
+    </div>
+
+    <div class="bg-surface-container-low rounded-2xl p-4 flex items-center gap-3">
+      <span class="material-symbols-outlined text-secondary">luggage</span>
+      <div>
+        <p class="text-xs font-bold text-secondary uppercase tracking-widest">Baggage</p>
+        <p class="text-sm text-on-surface mt-0.5">${f.baggage}</p>
+      </div>
+    </div>
+
+    ${f.note ? `<div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex gap-3">
+      <span class="material-symbols-outlined text-amber-600 text-base mt-0.5">info</span>
+      <p class="text-sm text-amber-900 leading-relaxed">${f.note}</p>
+    </div>` : ''}
+  `);
+}
+
+// swipe down to close
+let touchStartY = 0;
+document.getElementById('drawer').addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, { passive: true });
+document.getElementById('drawer').addEventListener('touchend', e => {
+  if (e.changedTouches[0].clientY - touchStartY > 80) closeDrawer();
+}, { passive: true });
 </script>
 </body>
 </html>
