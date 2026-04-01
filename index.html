@@ -192,6 +192,8 @@ tailwind.config = {
       </div>
     </button>
 
+    <div id="weather-hk"></div>
+
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
       <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
@@ -417,6 +419,8 @@ tailwind.config = {
         <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
     </button>
+
+    <div id="weather-seoul"></div>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -659,6 +663,8 @@ tailwind.config = {
       </div>
     </button>
 
+    <div id="weather-shanghai"></div>
+
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
       <div class="flex overflow-x-auto no-scrollbar gap-2 mb-5">
@@ -803,6 +809,8 @@ tailwind.config = {
         <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
       </div>
     </button>
+
+    <div id="weather-xian"></div>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -991,6 +999,8 @@ tailwind.config = {
         </div>
       </div>
     </button>
+
+    <div id="weather-beijing"></div>
 
     <div>
       <h3 class="font-headline font-bold text-base text-on-surface mb-3">Daily Itinerary</h3>
@@ -1338,6 +1348,85 @@ const FLIGHTS = {
   }
 };
 
+// ── WEATHER DATA (historical averages from previous years) ───────────────────
+const WEATHER = {
+  hk: [
+    { date: "Tue 19 May", hi: 29, lo: 24, icon: "🌦️", cond: "Warm showers",  rain: 45, hum: 84 },
+    { date: "Wed 20 May", hi: 30, lo: 25, icon: "⛅",  cond: "Partly cloudy", rain: 35, hum: 81 },
+    { date: "Thu 21 May", hi: 29, lo: 24, icon: "🌧️", cond: "Rainy",          rain: 60, hum: 86 },
+    { date: "Fri 22 May", hi: 30, lo: 25, icon: "🌤️", cond: "Mostly sunny",   rain: 25, hum: 79 },
+  ],
+  seoul: [
+    { date: "Sat 23 May", hi: 23, lo: 14, icon: "🌤️", cond: "Mostly sunny",   rain: 20, hum: 54 },
+    { date: "Sun 24 May", hi: 24, lo: 15, icon: "☀️",  cond: "Sunny",          rain: 10, hum: 50 },
+    { date: "Mon 25 May", hi: 22, lo: 14, icon: "⛅",  cond: "Partly cloudy",  rain: 25, hum: 58 },
+    { date: "Tue 26 May", hi: 23, lo: 15, icon: "🌦️", cond: "Light showers",  rain: 35, hum: 62 },
+    { date: "Wed 27 May", hi: 24, lo: 16, icon: "🌤️", cond: "Mostly sunny",   rain: 20, hum: 55 },
+  ],
+  shanghai: [
+    { date: "Thu 28 May", hi: 27, lo: 20, icon: "⛅",  cond: "Partly cloudy",  rain: 30, hum: 72 },
+    { date: "Fri 29 May", hi: 28, lo: 21, icon: "🌦️", cond: "Warm showers",   rain: 40, hum: 76 },
+    { date: "Sat 30 May", hi: 27, lo: 20, icon: "🌤️", cond: "Mostly sunny",   rain: 25, hum: 70 },
+  ],
+  xian: [
+    { date: "Sat 30 May", hi: 31, lo: 18, icon: "☀️",  cond: "Hot & sunny",    rain: 10, hum: 38 },
+    { date: "Sun 31 May", hi: 33, lo: 19, icon: "☀️",  cond: "Hot & sunny",    rain: 8,  hum: 36 },
+    { date: "Mon 1 Jun",  hi: 34, lo: 20, icon: "🌤️", cond: "Hot, some cloud", rain: 12, hum: 40 },
+  ],
+  beijing: [
+    { date: "Tue 2 Jun",  hi: 31, lo: 19, icon: "☀️",  cond: "Warm & sunny",   rain: 12, hum: 42 },
+    { date: "Wed 3 Jun",  hi: 32, lo: 20, icon: "🌤️", cond: "Mostly sunny",    rain: 15, hum: 45 },
+    { date: "Thu 4 Jun",  hi: 33, lo: 21, icon: "☀️",  cond: "Hot & sunny",     rain: 10, hum: 40 },
+    { date: "Fri 5 Jun",  hi: 32, lo: 20, icon: "⛅",  cond: "Partly cloudy",   rain: 20, hum: 48 },
+  ],
+};
+
+function renderWeather(cityKey) {
+  const days = WEATHER[cityKey];
+  const cards = days.map(d => `
+    <div class="flex-none flex flex-col items-center bg-surface-container-lowest rounded-2xl p-3 border border-surface-container min-w-[80px]">
+      <p class="text-[10px] font-semibold text-on-surface-variant text-center leading-tight">${d.date}</p>
+      <span class="text-2xl my-1.5">${d.icon}</span>
+      <p class="font-headline font-bold text-on-surface text-sm">${d.hi}°</p>
+      <p class="text-on-surface-variant text-[10px]">${d.lo}°</p>
+      <div class="mt-1.5 w-full bg-surface-container rounded-full h-1">
+        <div class="bg-primary rounded-full h-1" style="width:${d.rain}%"></div>
+      </div>
+      <p class="text-[9px] text-on-surface-variant mt-0.5">${d.rain}% rain</p>
+    </div>
+  `).join('');
+
+  // avg hi/lo across stay
+  const avgHi = Math.round(days.reduce((s,d) => s + d.hi, 0) / days.length);
+  const avgLo = Math.round(days.reduce((s,d) => s + d.lo, 0) / days.length);
+  const avgHum = Math.round(days.reduce((s,d) => s + d.hum, 0) / days.length);
+
+  return `
+  <div class="space-y-3">
+    <div class="flex items-center justify-between">
+      <h3 class="font-headline font-bold text-base text-on-surface">Weather</h3>
+      <span class="text-[10px] text-on-surface-variant font-medium bg-surface-container px-2 py-0.5 rounded-full">Historical avg</span>
+    </div>
+    <div class="flex items-center gap-4 bg-surface-container-low rounded-2xl px-4 py-3">
+      <div class="text-center">
+        <p class="text-[10px] text-on-surface-variant font-semibold uppercase tracking-wide">Avg High</p>
+        <p class="font-headline font-bold text-primary text-lg">${avgHi}°C</p>
+      </div>
+      <div class="h-8 w-px bg-surface-container-high"></div>
+      <div class="text-center">
+        <p class="text-[10px] text-on-surface-variant font-semibold uppercase tracking-wide">Avg Low</p>
+        <p class="font-headline font-bold text-on-surface text-lg">${avgLo}°C</p>
+      </div>
+      <div class="h-8 w-px bg-surface-container-high"></div>
+      <div class="text-center">
+        <p class="text-[10px] text-on-surface-variant font-semibold uppercase tracking-wide">Humidity</p>
+        <p class="font-headline font-bold text-on-surface text-lg">${avgHum}%</p>
+      </div>
+    </div>
+    <div class="flex overflow-x-auto no-scrollbar gap-2 pb-1">${cards}</div>
+  </div>`;
+}
+
 // ── DRAWER ENGINE ─────────────────────────────────────────────────────────────
 
 function openDrawer(html) {
@@ -1514,6 +1603,11 @@ function showFlight(flightKey) {
     </div>` : ''}
   `);
 }
+
+// ── RENDER WEATHER ON LOAD ────────────────────────────────────────────────────
+['hk','seoul','shanghai','xian','beijing'].forEach(city => {
+  document.getElementById('weather-' + city).innerHTML = renderWeather(city);
+});
 
 // swipe down to close
 let touchStartY = 0;
