@@ -137,7 +137,7 @@ tailwind.config = {
       </button>
       <button onclick="showFlight('outbound')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-primary text-xl">flight_land</span>
-        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 18 · 11:50</p>
+        <p class="text-on-surface font-headline font-semibold text-xs mt-1">May 18 · 12:00</p>
         <p class="text-on-surface-variant text-[10px]">Etihad EY160/870</p>
       </button>
       <button onclick="showFlight('hk_seoul')" class="bg-surface-container-lowest rounded-2xl p-3 text-center border border-surface-container active:scale-95 transition-transform">
@@ -172,8 +172,8 @@ tailwind.config = {
         </div>
         <div class="text-right">
           <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">HKG</p>
-          <p class="font-headline font-bold text-xl">+1 day</p>
-          <p class="text-on-surface-variant text-xs">May 19</p>
+          <p class="font-headline font-bold text-xl">09:00</p>
+          <p class="text-on-surface-variant text-xs">May 19 (+1)</p>
         </div>
       </div>
     </button>
@@ -972,7 +972,7 @@ tailwind.config = {
       </div>
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">PEK</p>
+          <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">PKX</p>
           <p class="font-headline font-bold text-xl">19:50</p>
           <p class="text-on-surface-variant text-xs">Jun 5</p>
         </div>
@@ -986,7 +986,7 @@ tailwind.config = {
         </div>
         <div class="text-right">
           <p class="text-on-surface-variant text-[10px] font-semibold uppercase tracking-wide">WAW</p>
-          <p class="font-headline font-bold text-xl">~10:00</p>
+          <p class="font-headline font-bold text-xl">06:30</p>
           <p class="text-on-surface-variant text-xs">Jun 6</p>
         </div>
       </div>
@@ -1279,11 +1279,12 @@ const HOTELS = {
 const FLIGHTS = {
   outbound: {
     label: "Warsaw → Hong Kong",
-    airline: "Etihad Airways",
+    airline: "Etihad Airways · Boeing 787",
     route: [
-      { from: "WAW", fromCity: "Warsaw Chopin", dep: "11:50", date: "18 May", to: "AUH", toCity: "Abu Dhabi", arr: "~21:00", flight: "EY160" },
-      { from: "AUH", fromCity: "Abu Dhabi", dep: "~23:30", date: "18 May", to: "HKG", toCity: "Hong Kong Intl", arr: "~13:00", flight: "EY870", note: "+1 day" }
+      { from: "WAW", fromCity: "Warsaw Chopin", dep: "12:00", date: "18 May", to: "AUH", toCity: "Abu Dhabi (Terminal A)", arr: "19:35", flight: "EY160 · Boeing 787-10", duration: "5h 35m" },
+      { from: "AUH", fromCity: "Abu Dhabi (Terminal A)", dep: "21:10", date: "18 May", to: "HKG", toCity: "Hong Kong Intl (Terminal 1)", arr: "09:00", flight: "EY870 · Boeing 787-9", note: "+1 day → 19 May", duration: "7h 50m" }
     ],
+    layover: "1h 35m layover in Abu Dhabi",
     baggage: "25 kg hold + 7 kg carry-on",
     emoji: "✈️"
   },
@@ -1326,11 +1327,12 @@ const FLIGHTS = {
   },
   return: {
     label: "Beijing → Warsaw",
-    airline: "Etihad Airways",
+    airline: "Etihad Airways · Boeing 787",
     route: [
-      { from: "PEK", fromCity: "Beijing Capital Intl", dep: "19:50", date: "5 Jun", to: "AUH", toCity: "Abu Dhabi", arr: "~00:30", flight: "EY889", note: "+1 day" },
-      { from: "AUH", fromCity: "Abu Dhabi", dep: "~02:00", date: "6 Jun", to: "WAW", toCity: "Warsaw Chopin", arr: "~07:00", flight: "EY159" }
+      { from: "PKX", fromCity: "Beijing Daxing Intl", dep: "19:50", date: "5 Jun", to: "AUH", toCity: "Abu Dhabi (Terminal A)", arr: "00:40", flight: "EY889 · Boeing 787-9", note: "+1 day → 6 Jun", duration: "8h 50m" },
+      { from: "AUH", fromCity: "Abu Dhabi (Terminal A)", dep: "02:30", date: "6 Jun", to: "WAW", toCity: "Warsaw Chopin", arr: "06:30", flight: "EY159 · Boeing 787-10", duration: "6h" }
     ],
+    layover: "1h 50m layover in Abu Dhabi",
     baggage: "25 kg hold + 7 kg carry-on",
     emoji: "🏠"
   }
@@ -1441,42 +1443,50 @@ function showHotel(cityKey) {
 
 function showFlight(flightKey) {
   const f = FLIGHTS[flightKey];
-  const segmentsHTML = f.route.map((seg, i) => `
-    <div class="relative ${i < f.route.length - 1 ? 'pb-6' : ''}">
-      ${i < f.route.length - 1 ? '<div class="absolute left-5 top-12 bottom-0 w-px bg-surface-container-high"></div>' : ''}
-      <div class="bg-surface-container-lowest rounded-2xl p-4 border border-surface-container">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-primary text-base">${f.type === 'High-Speed Train' ? 'train' : 'flight'}</span>
+  const icon = f.type === 'High-Speed Train' ? 'train' : 'airplanemode_active';
+  const segments = f.route.map((seg, i) => {
+    const isLast = i === f.route.length - 1;
+    const layoverHTML = (!isLast && f.layover)
+      ? `<div class="flex items-center gap-2 py-2 px-1">
+           <span class="material-symbols-outlined text-outline text-sm">schedule</span>
+           <p class="text-xs text-on-surface-variant font-medium">${f.layover}</p>
+         </div>`
+      : '';
+    return `<div class="bg-surface-container-lowest rounded-2xl p-4 border border-surface-container">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-none">
+              <span class="material-symbols-outlined text-primary text-sm">${f.type === 'High-Speed Train' ? 'train' : 'flight'}</span>
+            </div>
+            <div>
+              <p class="font-headline font-bold text-sm leading-tight">${seg.flight}</p>
+              <p class="text-[10px] text-on-surface-variant">${seg.date}</p>
+            </div>
           </div>
-          <div>
-            <p class="font-headline font-bold text-sm">${seg.flight}</p>
-            <p class="text-xs text-on-surface-variant">${seg.date}</p>
-          </div>
-          ${seg.note ? `<span class="ml-auto text-xs font-bold text-secondary bg-secondary-container px-2 py-0.5 rounded-full">${seg.note}</span>` : ''}
+          ${seg.duration ? `<span class="text-[10px] font-bold text-outline bg-surface-container px-2 py-0.5 rounded-full">${seg.duration}</span>` : ''}
         </div>
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="font-headline font-bold text-2xl">${seg.from}</p>
-            <p class="text-xs text-on-surface-variant leading-tight">${seg.fromCity}</p>
-            <p class="font-semibold text-sm mt-1">${seg.dep}</p>
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex-none">
+            <p class="font-headline font-bold text-2xl leading-none">${seg.dep}</p>
+            <p class="font-headline font-bold text-lg text-primary mt-0.5">${seg.from}</p>
+            <p class="text-[10px] text-on-surface-variant leading-tight mt-0.5 max-w-[95px]">${seg.fromCity}</p>
           </div>
-          <div class="flex-1 flex items-center px-4">
+          <div class="flex-1 flex items-center px-2">
             <div class="w-full flex items-center gap-1">
               <div class="h-px flex-1 border-t-2 border-dashed border-outline-variant"></div>
-              <span class="material-symbols-outlined text-primary text-sm">${f.type === 'High-Speed Train' ? 'train' : 'airplanemode_active'}</span>
+              <span class="material-symbols-outlined text-primary text-sm">${icon}</span>
               <div class="h-px flex-1 border-t-2 border-dashed border-outline-variant"></div>
             </div>
           </div>
-          <div class="text-right">
-            <p class="font-headline font-bold text-2xl">${seg.to}</p>
-            <p class="text-xs text-on-surface-variant leading-tight">${seg.toCity}</p>
-            <p class="font-semibold text-sm mt-1">${seg.arr}</p>
+          <div class="flex-none text-right">
+            <p class="font-headline font-bold text-2xl leading-none">${seg.arr}</p>
+            <p class="font-headline font-bold text-lg text-secondary mt-0.5">${seg.to}</p>
+            <p class="text-[10px] text-on-surface-variant leading-tight mt-0.5 max-w-[95px] text-right">${seg.toCity}</p>
+            ${seg.note ? `<span class="inline-block mt-1 text-[10px] font-bold text-secondary bg-secondary-container px-1.5 py-0.5 rounded-full">${seg.note}</span>` : ''}
           </div>
         </div>
-      </div>
-    </div>
-  `).join('');
+      </div>${layoverHTML}`;
+  }).join('');
 
   openDrawer(`
     <div class="flex items-start gap-3">
@@ -1487,12 +1497,10 @@ function showFlight(flightKey) {
         <p class="text-on-surface-variant text-sm mt-0.5">${f.airline || f.type}</p>
       </div>
     </div>
-
-    <div>
-      <h3 class="font-headline font-semibold text-base mb-3">Route</h3>
-      ${segmentsHTML}
+    <div class="space-y-2">
+      <h3 class="font-headline font-semibold text-base">Route</h3>
+      ${segments}
     </div>
-
     <div class="bg-surface-container-low rounded-2xl p-4 flex items-center gap-3">
       <span class="material-symbols-outlined text-secondary">luggage</span>
       <div>
@@ -1500,7 +1508,6 @@ function showFlight(flightKey) {
         <p class="text-sm text-on-surface mt-0.5">${f.baggage}</p>
       </div>
     </div>
-
     ${f.note ? `<div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex gap-3">
       <span class="material-symbols-outlined text-amber-600 text-base mt-0.5">info</span>
       <p class="text-sm text-amber-900 leading-relaxed">${f.note}</p>
