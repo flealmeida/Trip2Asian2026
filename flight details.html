@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#c5eccc",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-fixed": "#1c1c11",
+              "on-background": "#191c1d",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary-container": "#486a51",
+              "tertiary": "#605f50",
+              "surface-variant": "#e1e3e4",
+              "surface-tint": "#24657e",
+              "background": "#f8f9fa",
+              "outline": "#70787d",
+              "inverse-on-surface": "#f0f1f2",
+              "on-primary-container": "#0a566e",
+              "secondary-fixed-dim": "#aad0b1",
+              "on-tertiary-fixed-variant": "#48473a",
+              "on-primary-fixed": "#001f2a",
+              "on-tertiary-container": "#515042",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed-dim": "#c9c7b5",
+              "surface": "#f8f9fa",
+              "primary-fixed": "#bde9ff",
+              "secondary-container": "#c2e9c9",
+              "primary": "#24657e",
+              "on-primary-fixed-variant": "#004d64",
+              "on-secondary-fixed-variant": "#2c4e36",
+              "outline-variant": "#c0c8cd",
+              "on-surface-variant": "#40484c",
+              "primary-fixed-dim": "#93cfeb",
+              "tertiary-container": "#c5c2b0",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#93cfeb",
+              "surface-container": "#edeeef",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "primary-container": "#8ecae6",
+              "error-container": "#ffdad6",
+              "secondary": "#43664d",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed": "#e6e3d0",
+              "inverse-surface": "#2e3132",
+              "on-secondary-fixed": "#00210e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Component (Transactional State: Back Action instead of Menu) -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 h-16 bg-surface/70 backdrop-blur-md z-50">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-sky-50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-sky-700">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold tracking-tight text-on-surface text-lg">Flight Details</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-low border border-outline-variant/15">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Professional portrait of a male traveler with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHg73kV59EAdVEFgUSh4j8VtUK1QkWT7-WpCp6f11oys8zxnIic3QtmjJjk-gJRSMpGPG2ieZqXOlTJslRM212DHSmIgy4hxqg71RWzKhH9ebctreWCmIjPrYuwqudF1J9B9xKRObcCUEhrc9ogiOpIfUU-a_Y1vsVOO4yGAX-YX19LC1Lvy6KvKLF5Lhu-OW8MCqUA1v3xnrCsfcX38TzBAy-6CAYJX9yCG4CquKzTks-O04TyuU9uXBCgETcZnRzrKpAvm5GMJQR"/>
+</div>
+</header>
+<main class="pt-20 pb-12 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Hero Flight Status Card -->
+<section class="relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-[0_12px_24px_rgba(25,28,29,0.04)] p-8">
+<div class="absolute top-0 right-0 p-4">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold uppercase tracking-wider">
+                    On Time
+                </span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-high rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">flight_takeoff</span>
+</div>
+<div>
+<h2 class="font-headline font-extrabold text-2xl tracking-tighter text-sky-800">SkyLink Airways</h2>
+<p class="font-label text-sm text-outline">Flight SL-402 • Boeing 787-9</p>
+</div>
+</div>
+<div class="flex justify-between items-end mb-10">
+<div class="space-y-1">
+<span class="font-label text-xs font-bold text-primary uppercase tracking-widest">Departure</span>
+<h3 class="font-headline font-bold text-5xl tracking-tighter">NRT</h3>
+<p class="font-body text-sm text-outline">Tokyo Narita</p>
+<p class="font-body font-semibold mt-2">11:45 AM</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-4 pb-2">
+<div class="w-full h-[2px] bg-surface-variant relative flex items-center justify-center">
+<div class="absolute w-full h-full bg-gradient-to-r from-primary to-primary-container scale-x-75 origin-left rounded-full"></div>
+<span class="material-symbols-outlined absolute text-primary bg-surface-container-lowest px-1" style="font-variation-settings: 'FILL' 1;">flight</span>
+</div>
+<span class="mt-4 font-label text-[10px] font-bold text-outline uppercase tracking-widest">13h 20m</span>
+</div>
+<div class="text-right space-y-1">
+<span class="font-label text-xs font-bold text-primary uppercase tracking-widest">Arrival</span>
+<h3 class="font-headline font-bold text-5xl tracking-tighter text-secondary">JFK</h3>
+<p class="font-body text-sm text-outline">New York City</p>
+<p class="font-body font-semibold mt-2">11:05 AM</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 p-4 rounded-2xl bg-surface-container-low">
+<div class="text-center">
+<p class="font-label text-[10px] uppercase font-bold text-outline mb-1">Terminal</p>
+<p class="font-headline font-bold text-lg">1</p>
+</div>
+<div class="text-center border-x border-outline-variant/20">
+<p class="font-label text-[10px] uppercase font-bold text-outline mb-1">Gate</p>
+<p class="font-headline font-bold text-lg">42B</p>
+</div>
+<div class="text-center">
+<p class="font-label text-[10px] uppercase font-bold text-outline mb-1">Seat</p>
+<p class="font-headline font-bold text-lg">14K</p>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid (Asymmetric Bento) -->
+<section class="grid grid-cols-12 gap-4">
+<!-- Boarding Pass CTA -->
+<button class="col-span-12 md:col-span-7 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-container p-6 text-left transition-transform active:scale-95 duration-200">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-on-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+<h3 class="font-headline font-bold text-xl text-on-primary">Digital Boarding Pass</h3>
+<p class="text-on-primary/80 text-sm mt-1">Ready for check-in &amp; boarding</p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-on-primary/10 text-9xl transform rotate-12 transition-transform group-hover:scale-110">confirmation_number</span>
+</button>
+<!-- Baggage Info -->
+<div class="col-span-12 md:col-span-5 rounded-3xl bg-surface-container-low p-6">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">luggage</span>
+</div>
+</div>
+<h3 class="font-headline font-bold text-lg text-on-surface">Baggage</h3>
+<p class="text-outline text-sm mb-4">Claim: Belt 07</p>
+<button class="w-full py-2 bg-surface-container-highest rounded-full font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant hover:bg-surface-variant transition-colors">
+                    Track Bags
+                </button>
+</div>
+</section>
+<!-- Timeline / Segments -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-xl tracking-tight">Flight Journey</h3>
+<span class="font-label text-xs font-bold text-primary px-3 py-1 bg-primary-fixed rounded-full">Current Segment</span>
+</div>
+<div class="space-y-0">
+<!-- Segment 1 -->
+<div class="relative pl-10 pb-12">
+<div class="absolute left-[11px] top-2 bottom-0 w-0.5 bg-surface-variant"></div>
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full border-4 border-background bg-primary z-10"></div>
+<div class="bg-surface-container-low rounded-2xl p-5 ml-2">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-headline font-bold text-on-surface">Boarding Starts</h4>
+<p class="text-sm text-outline">Terminal 1 • Gate 42B</p>
+</div>
+<span class="font-label text-xs font-bold text-sky-700">11:00 AM</span>
+</div>
+<div class="flex items-center gap-2 mt-3 p-2 bg-surface-container-high rounded-lg text-xs font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">info</span>
+                            Final boarding call 15m before departure
+                        </div>
+</div>
+</div>
+<!-- Segment 2 -->
+<div class="relative pl-10 pb-12">
+<div class="absolute left-[11px] top-0 bottom-0 w-0.5 bg-surface-variant"></div>
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full border-4 border-background bg-surface-variant z-10"></div>
+<div class="bg-surface-container-low rounded-2xl p-5 ml-2 opacity-60">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-on-surface">In-flight Service</h4>
+<p class="text-sm text-outline">Premium Dining Experience</p>
+</div>
+<span class="font-label text-xs font-bold text-outline">01:30 PM</span>
+</div>
+</div>
+</div>
+<!-- Final Destination -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full border-4 border-background bg-secondary z-10"></div>
+<div class="bg-surface-container-low rounded-2xl p-5 ml-2">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-on-surface">Arrival at JFK</h4>
+<p class="text-sm text-outline">New York, USA</p>
+</div>
+<span class="font-label text-xs font-bold text-secondary">11:05 AM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Destination Preview (Glassmorphism card) -->
+<section class="relative rounded-[2.5rem] overflow-hidden aspect-[16/10] group">
+<img alt="New York Destination" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of New York City skyline with the Empire State Building at dusk in cool blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHDwkN6nP_GpXlK25tdZrVyw0uyiNjRxn7EqyneWSLuv-2ai8Wp5o_VC5jZKV1yUeFK2_bIBU8ZenuZ_-vslZwLkouCYcTK2AISxMnCRpZH-8yYaCnoG0UCRhssOKNi7WPVuA4usiQk7zbLdtJqe-XTiov8ANgK1XFmAhkE-4gnwRhpYnTlH7nAL3y8y1g0HoJI5CCRvdLcIbdmAZGZRWQxW5u0KWVd9vFQ-bgDTiQWQtK7lu_f33gQSELPZgmcv-PpXDSmsJCKHJY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-8 right-8 flex justify-between items-end">
+<div>
+<h3 class="font-headline font-extrabold text-3xl text-white tracking-tighter">New York</h3>
+<p class="text-white/80 font-body">14°C • Partly Cloudy</p>
+</div>
+<button class="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white rounded-full px-5 py-2 text-sm font-bold transition-colors">
+                    View Guide
+                </button>
+</div>
+</section>
+</main>
+<!-- Suppressed BottomNavBar & SideNav as per task-focused journey rules -->
+<!-- Content ends here to prioritize focused journey -->
+</body></html>

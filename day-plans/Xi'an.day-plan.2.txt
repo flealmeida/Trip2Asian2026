@@ -1,0 +1,48 @@
+# Your Day Plan
+
+## 1. Great Mosque of Xi'an
+Time: 09:00
+Duration: 1 hour 30 minutes
+
+Begin your day at one of China's oldest and most well-preserved mosques, blending traditional Chinese architecture with Islamic art. Explore its beautiful courtyards and prayer halls.
+
+### Travel to Gao's Grand Courtyard
+Method: walking
+Time: 10 minutes
+
+## 2. Gao's Grand Courtyard
+Time: 10:40
+Duration: 1 hour 10 minutes
+
+Visit a beautifully restored traditional residence of a Ming Dynasty official. Discover intricate architecture, shadow puppet shows, and cultural exhibits.
+
+### Travel to Beiyuanmen Street (Muslim Street)
+Method: walking
+Time: 10 minutes
+
+## 3. Beiyuanmen Street (Muslim Street)
+Time: 11:55
+Duration: 2 hours 5 minutes
+
+Immerse yourself in the bustling heart of the Muslim Quarter. Sample delicious street food, browse unique souvenirs, and experience the vibrant atmosphere. This is also a great spot for lunch.
+
+### Travel to Drum Tower
+Method: walking
+Time: 10 minutes
+
+## 4. Drum Tower
+Time: 14:10
+Duration: 1 hour
+
+Stand before the magnificent Drum Tower, an imposing structure that once marked the beginning and end of the day with its drum beats. Climb to the top for panoramic views and learn about its history.
+
+### Travel to Bell Tower
+Method: walking
+Time: 10 minutes
+
+## 5. Bell Tower
+Time: 15:25
+Duration: 1 hour
+
+Visit the iconic Bell Tower, a symbol of Xi'an, standing at the city's geographical center. Like the Drum Tower, it marked time and offers insights into ancient city life and great views.
+

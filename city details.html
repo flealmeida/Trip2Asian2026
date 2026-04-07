@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#c5eccc",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-fixed": "#1c1c11",
+              "on-background": "#191c1d",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary-container": "#486a51",
+              "tertiary": "#605f50",
+              "surface-variant": "#e1e3e4",
+              "surface-tint": "#24657e",
+              "background": "#f8f9fa",
+              "outline": "#70787d",
+              "inverse-on-surface": "#f0f1f2",
+              "on-primary-container": "#0a566e",
+              "secondary-fixed-dim": "#aad0b1",
+              "on-tertiary-fixed-variant": "#48473a",
+              "on-primary-fixed": "#001f2a",
+              "on-tertiary-container": "#515042",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed-dim": "#c9c7b5",
+              "surface": "#f8f9fa",
+              "primary-fixed": "#bde9ff",
+              "secondary-container": "#c2e9c9",
+              "primary": "#24657e",
+              "on-primary-fixed-variant": "#004d64",
+              "on-secondary-fixed-variant": "#2c4e36",
+              "outline-variant": "#c0c8cd",
+              "on-surface-variant": "#40484c",
+              "primary-fixed-dim": "#93cfeb",
+              "tertiary-container": "#c5c2b0",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#93cfeb",
+              "surface-container": "#edeeef",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "primary-container": "#8ecae6",
+              "error-container": "#ffdad6",
+              "secondary": "#43664d",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed": "#e6e3d0",
+              "inverse-surface": "#2e3132",
+              "on-secondary-fixed": "#00210e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 h-16 bg-surface/70 backdrop-blur-md docked full-width z-50 no-line tonal-layering">
+<div class="flex items-center gap-4">
+<button onclick="history.back()" class="p-2 text-sky-700 hover:bg-sky-50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold text-sky-800 tracking-tighter font-headline" id="page-city-title">Day Plan</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-sky-50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img alt="User Profile" data-alt="Close-up studio portrait of a friendly professional man with a neutral background and soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClezvB4IPYrXnjrvfbPHy0PWlaDwgB9-v7BKdaNxw70MIFPM9VorguAE613IA2vWqV7XKSyTVmlH5sXkP90fu4-vm3ETi4_F0ZhTyruW63QYGVhxvJncGgmZ7gFbCNX2lRz51vcvgaWsg8-z214e2NwY8AN23MhLoOF9ueCd8VlB06QCjFyNppgvYe9QXAChwwD2dJ-qYsCGYzNXCV_94btIatbc5Y_KUPVPc3dAz69LO6vgLr4r9fLoMxQVS-IWgLrz0U72x5hL50"/>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-32">
+<!-- Hero Section: Immersive Asymmetry -->
+<section class="relative px-6 py-8 flex flex-col md:flex-row gap-8 items-end">
+<div class="w-full md:w-3/5 aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
+<img alt="Kyoto Temple" class="w-full h-full object-cover" data-alt="The golden Kinkaku-ji temple in Kyoto reflecting in a calm pond surrounded by lush autumn maple trees with vibrant red leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL2HDPyAW7QAvLcdprfh9xKnR8tR2YacVy3ugVR5s4u2c6Xr6085rg-BDvx7s7de1PdkPeoCAQza54nAhROgOrEjagSMotJxZ8ovHKiT1Wm-KY9pwR6FRmqJfwofWDup3X68_eqIe01-eJxT3laSfqK5q89ih3VyEQKWrRDI2fHG7ZMCiNpkofN-y6Zxk6OKs1VXM2CILGVrX2yX99MM3D9XHulR_SKbWqYAcfi6wdUY2dnAbPDs_0TVrUlb9hFFbiF1KYOoIk756n"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<span class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-headline">Cultural Capital</span>
+</div>
+</div>
+<div class="w-full md:w-2/5 mb-4">
+<h2 class="text-5xl font-extrabold font-headline text-on-surface tracking-tighter leading-none mb-6">
+                    Ancient <br/> <span class="text-primary">Elegance.</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                    Step into a world where thousand-year-old temples coexist with bustling modern tea houses. Kyoto is the heart of traditional Japan, a city defined by seasonal beauty and quiet grace.
+                </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex-1 tonal-shift">
+<span class="text-primary material-symbols-outlined mb-2" data-icon="thermostat">thermostat</span>
+<div class="text-label-md text-slate-500 uppercase tracking-wider font-bold">Weather</div>
+<div class="text-xl font-bold font-headline">24°C</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex-1 tonal-shift">
+<span class="text-secondary material-symbols-outlined mb-2" data-icon="schedule">schedule</span>
+<div class="text-label-md text-slate-500 uppercase tracking-wider font-bold">Best Time</div>
+<div class="text-xl font-bold font-headline">Oct-Nov</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Horizontal Scroll: Floating Itinerary Chips -->
+<section class="mt-8">
+<div class="px-6 mb-4">
+<h3 class="text-2xl font-bold font-headline tracking-tight text-on-surface">Experience Categories</h3>
+</div>
+<div class="flex gap-4 overflow-x-auto px-6 pb-4 hide-scrollbar">
+<div class="bg-tertiary-container text-on-tertiary-container px-6 py-3 rounded-full flex items-center gap-2 whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="temple_buddhist">temple_buddhist</span>
+<span class="font-bold font-headline">Temples</span>
+</div>
+<div class="bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-full flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-[20px]" data-icon="restaurant">restaurant</span>
+<span class="font-bold font-headline">Gastronomy</span>
+</div>
+<div class="bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-full flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-[20px]" data-icon="nature_people">nature_people</span>
+<span class="font-bold font-headline">Nature</span>
+</div>
+<div class="bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-full flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-bold font-headline">Artisan Crafts</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Top Activities & Points of Interest -->
+<section class="px-6 mt-12">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-3xl font-extrabold font-headline tracking-tighter text-on-surface">Must-See Icons</h3>
+<p class="text-slate-500 font-medium">Curated landmarks for your first visit</p>
+</div>
+<button class="text-primary font-bold hover:underline">View Map</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-[2rem] h-[400px]">
+<img alt="Fushimi Inari" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Long tunnel of thousands of bright orange Torii gates snaking up a mountain path in Fushimi Inari Shrine, Kyoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8moDt7L4dAnjT7ATuC-b5dWIdgat7_Ma0yDMJY2uEGe_nGYH2Jcpa9b4VHG0FCI88OTZl61W57PHfzQ-4LwV9Qy-bSy1zDN30gvJHWDTtAoNkP7PQYPvBQ15vf2oroAxFXIn2NScn6lQhoEgkHHmGV9zhtLVlwXfYmozK0LfoIgn1LKmjXeB0X0YvqoV2TIusDhkLmfyobX5tie-xw0ehpau7zgxZnLBP6FNVrQrOeFKXFjm_XJ08D7CJui0xHh2e77qIt3iYyo3i"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                            </span>
+</div>
+<h4 class="text-3xl font-bold text-white font-headline">Fushimi Inari Shrine</h4>
+<p class="text-white/80 mt-2 line-clamp-2">Hike through thousands of vermilion torii gates that trail through the forest up Mount Inari.</p>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-[2rem] shadow-sm flex flex-col justify-between">
+<div class="aspect-square rounded-2xl overflow-hidden mb-4">
+<img alt="Arashiyama Bamboo" class="w-full h-full object-cover" data-alt="Towers of green bamboo stalks reaching into the sky with soft sunlight filtering through the canopy of Arashiyama Bamboo Grove" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeF4EzlhMJlIZyn53hj_EOgtQx-v_45qZpvTguFf-4qcinHV-lI60xG-xH7FC0hzi89X2g_8IfjfMTbFJWjvGsnLVfSjvTtJvz13fzI9V7NuARSU-HhCP3DaJfLZ2vwxUAiVhmvcp38gPbJj-t7cBadLt5p5JPtwTUhS4i4OidvIYFwYrhxgtryenlRH-a-Ersfx8up8YUx3cCNPk98X_ZJK4mLS83bR8hpccKiM10Zwem_gQSgkemYJTdBnOooNiQ68zFQeB4WlgI"/>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg font-headline">Arashiyama Bamboo Grove</h4>
+<span class="text-secondary text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.7
+                            </span>
+</div>
+<p class="text-slate-500 text-sm mt-2">A meditative walk through towering green stalks.</p>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-[2rem] shadow-sm flex flex-col justify-between">
+<div class="aspect-square rounded-2xl overflow-hidden mb-4">
+<img alt="Gion District" class="w-full h-full object-cover" data-alt="Traditional wooden tea houses and narrow stone-paved streets of Gion district at twilight with glowing lanterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsFolkoFBpjQFBOOCfSqb6DuQs6Tb8rWw0oeleemiax-RgmPaSIs7zURpdt7Ov-cAE4qHWLROXtCKSM32F4ECWBOxxW0Uk6b1p6E8g_zoi5VtRe3z87YZaVnOSFu6D_rKFTAIL2fqI8hY5Zdq2iPGwtV4HNSEeRlRmwvcmKRRZ6K9gfYsAibqOt7vIk6LU4DBnJq0AsfDUk-55AjCs77BR2Y5BXBJTmE6eQvPPt54LffHv70nU8xV9ZAayCWreI0Zf0gjo8xRn9znA"/>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg font-headline">Gion District</h4>
+<span class="text-secondary text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                            </span>
+</div>
+<p class="text-slate-500 text-sm mt-2">The famous geisha district with historic machiya houses.</p>
+</div>
+</div>
+<!-- Small Card 3 -->
+<div class="md:col-span-2 bg-surface-container-low rounded-[2rem] p-8 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h4 class="text-2xl font-bold font-headline mb-4">Must-Try Food</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="soup_kitchen">soup_kitchen</span>
+</div>
+<div>
+<div class="font-bold">Kaiseki Ryori</div>
+<div class="text-xs text-slate-500 uppercase font-bold tracking-widest">Multi-course Dining</div>
+</div>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="emoji_food_beverage">emoji_food_beverage</span>
+</div>
+<div>
+<div class="font-bold">Uji Matcha</div>
+<div class="text-xs text-slate-500 uppercase font-bold tracking-widest">Finest Green Tea</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden">
+<img alt="Matcha Tea" class="w-full h-full object-cover" data-alt="Authentic Japanese tea ceremony setting with whisked matcha in a ceramic bowl and traditional sweets on a wooden tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fyEYho2I6J3u24mbtwfxUzA_sWQLBfC_1EKDWJSQMT92qHbdf-MJhREUQDSkDwyjs3O8mkyW9wnbJH2lkRAKR2v8qkTcsRJ2slIYS6zQIQOOoLo5w3mV-fkw1nsaV1X6f-lid96A2f25pRnYSGrgE1IemFiJculeuNNmRe81JQrvEW2Of-cZvW9YGEaO02OttXE__xN_iulu-49Lpjzreml39Tpy2YRTNZL9JIMaws1D304L-y9rGELNHI8315Mbx4nJOI3nzr88"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Day Plans Section -->
+<section class="mt-16" id="day-plans-section">
+  <div class="px-6 mb-6">
+    <h3 class="text-3xl font-extrabold font-headline tracking-tighter text-on-surface">Day Plans</h3>
+    <p class="text-slate-500 font-medium">Your curated daily itineraries</p>
+  </div>
+  <div class="flex gap-3 overflow-x-auto px-6 pb-4 hide-scrollbar" id="day-tabs"></div>
+  <div class="px-6 mt-6" id="day-timeline"></div>
+</section>
+
+<!-- CTA Section -->
+<section class="px-6 mt-16 mb-12">
+<div class="bg-gradient-to-br from-primary to-primary-container rounded-[2rem] p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<h3 class="text-3xl font-extrabold font-headline text-white mb-4 relative z-10">Ready to explore?</h3>
+<p class="text-white/90 mb-8 max-w-md mx-auto relative z-10">Book a personalized cultural tour and discover the hidden secrets of the Old Capital.</p>
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all relative z-10">Start Planning</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/70 backdrop-blur-xl rounded-t-[2rem] z-50 shadow-[0_-12px_24px_rgba(25,28,29,0.06)] no-line tonal-shift">
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-headline text-[11px] uppercase tracking-wider font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-sky-100 text-sky-900 rounded-full px-6 py-2 active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-headline text-[11px] uppercase tracking-wider font-bold">Itinerary</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-headline text-[11px] uppercase tracking-wider font-bold">Profile</span>
+</a>
+</nav>
+
+<script>
+const DAY_PLANS = {
+  Beijing: [
+    {
+      label: "Day 1 · Historic Core",
+      items: [
+        { type:"stop", time:"09:00", name:"Tiananmen Square", duration:"1 hr 30 min", desc:"Start your day at this iconic public square, a significant site in Chinese history. See the Monument to the People's Heroes, the Great Hall of the People, and the National Museum of China." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Tiananmen Gate" },
+        { type:"stop", time:"10:40", name:"Tiananmen Gate (Gate of Heavenly Peace)", duration:"30 min", desc:"Pass through the Gate of Heavenly Peace, famous for its large portrait of Mao Zedong, which serves as the main entrance to the Forbidden City complex." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Forbidden City" },
+        { type:"stop", time:"11:20", name:"Forbidden City", duration:"4 hrs", desc:"Explore the vast Forbidden City, a UNESCO World Heritage site and former imperial palace for 24 emperors. Wander through grand halls, courtyards, and gardens." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Jingshan Park" },
+        { type:"stop", time:"15:35", name:"Jingshan Park", duration:"1 hr 30 min", desc:"Conclude your day at Jingshan Park, directly opposite the Forbidden City's north gate. Climb to the top for a breathtaking panoramic view of the entire Forbidden City." }
+      ]
+    },
+    {
+      label: "Day 2 · Great Wall",
+      items: [
+        { type:"stop", time:"08:00", name:"Departure from Beijing", duration:"30 min", desc:"Start your day trip from a central location in Beijing. Ensure you have comfortable shoes and water for the day." },
+        { type:"travel", method:"driving", duration:"1 hr 30 min", to:"Mutianyu Great Wall" },
+        { type:"stop", time:"09:30", name:"Mutianyu Great Wall", duration:"4 hrs", desc:"Explore the well-preserved Mutianyu section of the Great Wall. Enjoy breathtaking views, walk along the ancient battlements, and consider taking the cable car up and the toboggan slide down." },
+        { type:"travel", method:"driving", duration:"1 hr 30 min", to:"Lunch near Mutianyu" },
+        { type:"stop", time:"13:45", name:"Lunch near Mutianyu", duration:"1 hr", desc:"Enjoy a well-deserved lunch at one of the local restaurants near the Mutianyu Great Wall. Try some authentic local Chinese cuisine." },
+        { type:"stop", time:"16:15", name:"Arrival in Beijing", duration:"30 min", desc:"Conclude your Great Wall day trip back in central Beijing." }
+      ]
+    },
+    {
+      label: "Day 3 · Summer Palace",
+      items: [
+        { type:"stop", time:"09:00", name:"East Palace Gate", duration:"30 min", desc:"The main entrance to the Summer Palace, where you can start your exploration. Admire the traditional imperial architecture before heading deeper into the palace grounds." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Hall of Benevolence and Longevity" },
+        { type:"stop", time:"09:40", name:"Hall of Benevolence and Longevity", duration:"45 min", desc:"An important administrative area where Emperor Guangxu and Empress Dowager Cixi conducted court affairs." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Garden of Virtue and Harmony" },
+        { type:"stop", time:"10:35", name:"Garden of Virtue and Harmony (Grand Theatre)", duration:"45 min", desc:"Home to the magnificent Grand Theatre, where Empress Dowager Cixi enjoyed Peking Opera performances. The three-story stage is an architectural marvel." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Long Corridor" },
+        { type:"stop", time:"11:30", name:"Long Corridor", duration:"1 hr 15 min", desc:"A UNESCO World Heritage site — this 728-meter long covered walkway is adorned with over 14,000 paintings depicting classical Chinese landscapes and stories." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Marble Boat" },
+        { type:"stop", time:"13:45", name:"Marble Boat", duration:"45 min", desc:"A unique two-story boat carved from marble, built by Empress Dowager Cixi with funds originally intended for the navy." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Tower of Buddhist Incense" },
+        { type:"stop", time:"14:45", name:"Tower of Buddhist Incense (Foxiangge)", duration:"1 hr 30 min", desc:"The most prominent structure on Longevity Hill, offering panoramic views of the entire Summer Palace and Kunming Lake." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Kunming Lake" },
+        { type:"stop", time:"16:30", name:"Kunming Lake", duration:"1 hr", desc:"Spend time by the expansive Kunming Lake, the central feature of the Summer Palace. Enjoy a relaxing boat ride or a leisurely stroll along its shores." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Seventeen-Arch Bridge" },
+        { type:"stop", time:"17:45", name:"Seventeen-Arch Bridge", duration:"45 min", desc:"A beautiful iconic bridge connecting Kunming Lake to Nanhu Island. Admire its intricate carvings and the stunning reflections on the water at sunset." }
+      ]
+    },
+    {
+      label: "Day 4 · Hutongs",
+      items: [
+        { type:"stop", time:"09:00", name:"Nanluoguxiang Hutong", duration:"2 hrs", desc:"Explore one of Beijing's most famous and best-preserved hutongs. Wander through its narrow alleys, admire traditional courtyard homes, and browse unique boutiques." },
+        { type:"stop", time:"11:30", name:"Shichahai Scenic Area (Houhai Lake)", duration:"2 hrs", desc:"A picturesque area comprising three lakes surrounded by historic residences, temples, and lively bars. Walk along Houhai Lake and visit the ancient Yandaixiejie (Tobacco Pouch Street)." },
+        { type:"stop", time:"13:45", name:"Lunch & Bell and Drum Towers Area", duration:"1 hr 30 min", desc:"Enjoy a traditional Beijing lunch in the hutongs surrounding the iconic Bell and Drum Towers. Explore these impressive historical structures and the charming alleys nearby." },
+        { type:"stop", time:"16:00", name:"Dashilar Street & Qianmen Main Street", duration:"2 hrs", desc:"Experience the vibrant commercial history of Beijing at Dashilar, a bustling traditional street known for its century-old shops, theaters, and local snacks." }
+      ]
+    }
+  ],
+  "Hong Kong": [
+    {
+      label: "Day 1 · Island Icons",
+      items: [
+        { type:"stop", time:"09:00", name:"Central District", duration:"1 hr 30 min", desc:"Begin your day in the bustling heart of Hong Kong's financial and commercial district. Explore iconic skyscrapers and historical colonial buildings." },
+        { type:"stop", time:"10:50", name:"Victoria Peak", duration:"2 hrs", desc:"Ascend to Victoria Peak via the historic Peak Tram for breathtaking panoramic views of Hong Kong Island, Kowloon, and Victoria Harbour." },
+        { type:"stop", time:"13:20", name:"Lunch in Central", duration:"1 hr", desc:"Enjoy a delicious lunch in Central, offering a wide array of dining options from local Cantonese fare to international cuisine." },
+        { type:"stop", time:"14:35", name:"Star Ferry Ride", duration:"1 hr", desc:"Experience the iconic Star Ferry crossing Victoria Harbour, offering stunning views of both Hong Kong Island and the Tsim Sha Tsui skyline." },
+        { type:"stop", time:"15:50", name:"Mid-Levels Escalator & SoHo", duration:"1 hr 30 min", desc:"Explore the fascinating Mid-Levels Escalator system, the longest outdoor covered escalator system in the world, and discover the vibrant streets of SoHo." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Dinner in SoHo/Central" },
+        { type:"stop", time:"17:35", name:"Dinner in SoHo/Central", duration:"1 hr 30 min", desc:"Conclude your day with dinner in the lively SoHo district, known for its diverse culinary scene." }
+      ]
+    },
+    {
+      label: "Day 2 · Kowloon",
+      items: [
+        { type:"stop", time:"09:00", name:"Ladies' Market", duration:"2 hrs", desc:"Explore one of Hong Kong's most famous street markets, offering clothing, accessories, souvenirs, and electronics. Practice your bargaining skills!" },
+        { type:"stop", time:"11:15", name:"Lunch in Mong Kok", duration:"1 hr", desc:"Enjoy authentic local Cantonese cuisine in one of the many eateries around Mong Kok. Try dim sum, congee, or roasted meats." },
+        { type:"stop", time:"12:45", name:"Tsim Sha Tsui Promenade & Avenue of Stars", duration:"3 hrs", desc:"Stroll along the iconic waterfront promenade offering stunning views of Victoria Harbour. Visit the Avenue of Stars to see tributes to Hong Kong's film industry." },
+        { type:"stop", time:"16:45", name:"Dinner in Tsim Sha Tsui", duration:"1 hr 30 min", desc:"Dine at one of the many restaurants in Tsim Sha Tsui, ranging from casual local eateries to upscale international dining with harbour views." },
+        { type:"stop", time:"18:30", name:"Symphony of Lights", duration:"1 hr", desc:"Experience the spectacular nightly multimedia show featuring synchronized building lights, laser beams, and music across Victoria Harbour." }
+      ]
+    },
+    {
+      label: "Day 3 · Lantau Island",
+      items: [
+        { type:"stop", time:"09:00", name:"Ngong Ping 360 Cable Car", duration:"45 min", desc:"Take the Ngong Ping 360 cable car from Tung Chung to Ngong Ping Village. Enjoy panoramic views of Lantau Island and the South China Sea." },
+        { type:"stop", time:"09:45", name:"Ngong Ping Village", duration:"45 min", desc:"Explore the cultural themed village with various shops and restaurants, gateway to the Big Buddha and Po Lin Monastery." },
+        { type:"stop", time:"10:30", name:"Tian Tan Buddha (Big Buddha)", duration:"1 hr 30 min", desc:"Ascend the 268 steps to visit the magnificent bronze statue of Tian Tan Buddha, offering serene views of the surrounding mountains." },
+        { type:"stop", time:"12:00", name:"Po Lin Monastery", duration:"1 hr 30 min", desc:"Visit the grand Buddhist monastery next to the Big Buddha. Admire the beautiful temples and enjoy a vegetarian lunch at its famous restaurant." },
+        { type:"stop", time:"14:00", name:"Tai O Fishing Village", duration:"2 hrs 30 min", desc:"Discover the 'Venice of Hong Kong,' a charming stilt house village. Take a boat ride to spot pink dolphins (seasonal) and explore local markets." },
+        { type:"stop", time:"17:15", name:"Citygate Outlets", duration:"1 hr 45 min", desc:"Conclude your day with shopping at Citygate Outlets, conveniently near the Tung Chung MTR station." }
+      ]
+    },
+    {
+      label: "Day 4 · Macau Day Trip",
+      items: [
+        { type:"stop", time:"09:00", name:"Ruins of St. Paul's & Monte Fort", duration:"1 hr 30 min", desc:"Explore the iconic facade of the Ruins of St. Paul's and ascend to Monte Fort for panoramic views of Macau's historic center." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Senado Square" },
+        { type:"stop", time:"10:45", name:"Senado Square", duration:"1 hr 15 min", desc:"Immerse yourself in the vibrant atmosphere of Senado Square, a UNESCO World Heritage site with charming Portuguese colonial architecture and mosaic pavements." },
+        { type:"travel", method:"walking", duration:"15 min", to:"A-Ma Temple" },
+        { type:"stop", time:"12:15", name:"A-Ma Temple", duration:"1 hr", desc:"Visit the oldest temple in Macau, dedicated to the goddess Mazu, protector of seafarers and fishermen." },
+        { type:"travel", method:"taxi", duration:"15 min", to:"Macau Tower" },
+        { type:"stop", time:"13:35", name:"Macau Tower", duration:"1 hr 30 min", desc:"Ascend to the observation deck of Macau Tower for breathtaking panoramic views. For the adventurous, consider the bungee jump or skywalk." },
+        { type:"travel", method:"taxi", duration:"20 min", to:"The Venetian Macao" },
+        { type:"stop", time:"15:25", name:"The Venetian Macao", duration:"5 hrs", desc:"Experience the grandeur of The Venetian Macao, with an impressive casino, expansive shopping arcade with gondola rides, and world-class entertainment." }
+      ]
+    }
+  ],
+  Seoul: [
+    {
+      label: "Day 1 · Royal Palaces",
+      items: [
+        { type:"stop", time:"09:00", name:"Gyeongbokgung Palace", duration:"2 hrs 30 min", desc:"Start at the grandest of Seoul's five palaces. Witness the changing of the guard ceremony and explore its majestic grounds, including Geunjeongjeon Hall and Gyeonghoeru Pavilion." },
+        { type:"stop", time:"11:30", name:"National Folk Museum of Korea", duration:"1 hr", desc:"Located within the Gyeongbokgung grounds, this museum offers a deep dive into the daily lives and culture of the Korean people from prehistoric times to the modern era." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Bukchon Hanok Village" },
+        { type:"stop", time:"12:45", name:"Bukchon Hanok Village", duration:"1 hr 30 min", desc:"Wander through this charming traditional Korean village nestled between Gyeongbokgung and Changdeokgung Palaces. Admire the beautifully preserved hanok houses." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Changdeokgung Palace" },
+        { type:"stop", time:"14:30", name:"Changdeokgung Palace & Huwon (Secret Garden)", duration:"2 hrs 30 min", desc:"A UNESCO World Heritage site renowned for its architectural harmony with natural surroundings. Don't miss the tranquil Secret Garden (Huwon)." }
+      ]
+    },
+    {
+      label: "Day 2 · Modern Seoul",
+      items: [
+        { type:"stop", time:"09:00", name:"Hongdae Street Art & Shopping", duration:"1 hr 30 min", desc:"Explore the vibrant street art, independent fashion boutiques, and lively atmosphere of Hongdae, known for its youthful energy." },
+        { type:"stop", time:"10:30", name:"Coffee Break at a Hongdae Cafe", duration:"1 hr", desc:"Enjoy a relaxing coffee and soak in the local ambiance at one of Hongdae's trendy cafes, particularly around the Yeonnam-dong area." },
+        { type:"stop", time:"12:10", name:"Lunch & Gangnam Station Area", duration:"1 hr 30 min", desc:"Arrive in Gangnam, a symbol of modern Seoul. Have lunch at one of the many upscale restaurants near Gangnam Station, then explore the bustling streets." },
+        { type:"stop", time:"13:40", name:"Starfield COEX Mall & Byeolmadang Library", duration:"1 hr 30 min", desc:"Visit the impressive Starfield COEX Mall, home to the iconic Byeolmadang Library, a grand open public library and popular photo spot." },
+        { type:"stop", time:"15:40", name:"Itaewon Global Village & Shopping", duration:"2 hrs", desc:"Explore Itaewon, known for its diverse international atmosphere, unique boutiques, and global cuisine. Discover hidden alleys and street art." },
+        { type:"stop", time:"17:40", name:"Dinner in Itaewon", duration:"1 hr 30 min", desc:"Conclude your day with dinner in the lively Itaewon district, choosing from a wide array of international restaurants." }
+      ]
+    },
+    {
+      label: "Day 3 · Markets & Culture",
+      items: [
+        { type:"stop", time:"09:00", name:"Gwangjang Market", duration:"1 hr 30 min", desc:"Start with a traditional Korean breakfast at one of Korea's oldest traditional markets, famous for its street food like bindaetteok, mayak gimbap, and tteokbokki." },
+        { type:"travel", method:"public transit", duration:"20 min", to:"Bukchon Hanok Village" },
+        { type:"stop", time:"11:30", name:"Bukchon Hanok Village", duration:"1 hr 30 min", desc:"Wander through this traditional Korean village with beautifully preserved hanok houses, offering a glimpse into Seoul's past and a peaceful atmosphere." },
+        { type:"travel", method:"public transit", duration:"20 min", to:"Insadong" },
+        { type:"stop", time:"14:00", name:"Insadong", duration:"2 hrs", desc:"Immerse yourself in Korean culture in Insadong, a vibrant neighborhood known for its traditional tea houses, art galleries, antique shops, and street performances." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Dongdaemun Design Plaza" },
+        { type:"stop", time:"18:00", name:"Dongdaemun Design Plaza (DDP) & Night Market", duration:"3 hrs", desc:"Marvel at the futuristic architecture of DDP. Dive into the bustling Dongdaemun Night Market, famous for its fashion, street food, and late-night shopping." }
+      ]
+    },
+    {
+      label: "Day 4 · Suwon Fortress",
+      items: [
+        { type:"stop", time:"10:00", name:"Suwon Hwaseong Fortress", duration:"2 hrs 30 min", desc:"A UNESCO World Heritage site — this magnificent fortress wall encircles the city of Suwon, built in the late 18th century by King Jeongjo. Walk along the wall and enjoy panoramic views." },
+        { type:"stop", time:"12:45", name:"Lunch in Haenggung-dong", duration:"1 hr", desc:"Enjoy a traditional Korean meal in the charming Haenggung-dong area, known for its various restaurants and cafes near the fortress." },
+        { type:"travel", method:"walking", duration:"5 min", to:"Hwaseong Haenggung Palace" },
+        { type:"stop", time:"13:50", name:"Hwaseong Haenggung Palace", duration:"1 hr 30 min", desc:"The largest supplemental palace used by the kings during the Joseon Dynasty. King Jeongjo often stayed here when visiting Suwon Hwaseong Fortress." },
+        { type:"travel", method:"walking", duration:"5 min", to:"Jidong Market" },
+        { type:"stop", time:"15:30", name:"Jidong Market", duration:"1 hr 30 min", desc:"One of Suwon's largest traditional markets, offering a vibrant atmosphere, fresh produce, street food, and various goods." }
+      ]
+    },
+    {
+      label: "Day 5 · DMZ Tour",
+      items: [
+        { type:"stop", time:"08:00", name:"Departure from Seoul", duration:"—", desc:"Start your day trip to the DMZ from a designated meeting point. It is recommended to join a guided tour due to security regulations and specific entry procedures." },
+        { type:"travel", method:"driving", duration:"1 hr 30 min", to:"Imjingak Park" },
+        { type:"stop", time:"09:30", name:"Imjingak Park", duration:"1 hr", desc:"The first stop near the DMZ, home to the Bridge of Freedom and the Mangbaedan Altar. Explore monuments and displays reflecting the pain of division and the hope for reunification." },
+        { type:"travel", method:"driving", duration:"1 hr 30 min", to:"Third Tunnel of Aggression" },
+        { type:"stop", time:"11:00", name:"The Third Tunnel of Aggression", duration:"1 hr 30 min", desc:"Discovered in 1978, this tunnel was built by North Korea for a surprise attack on Seoul. Visitors can walk or take a monorail into a portion of the tunnel." },
+        { type:"travel", method:"driving", duration:"30 min", to:"Dora Observatory" },
+        { type:"stop", time:"13:00", name:"Dora Observatory", duration:"1 hr", desc:"From this observation point, gaze across the DMZ into North Korean territory, seeing the city of Kaesong and the Kaesong Industrial Complex." },
+        { type:"travel", method:"driving", duration:"30 min", to:"Dorasan Station" },
+        { type:"stop", time:"14:30", name:"Dorasan Station", duration:"45 min", desc:"The northernmost railway station in South Korea, symbolizing the hope for reunification. Intended to connect to North Korean railways in the future." },
+        { type:"travel", method:"driving", duration:"30 min", to:"Seoul" },
+        { type:"stop", time:"17:00", name:"Arrival in Seoul", duration:"—", desc:"Conclude your impactful day trip back in Seoul, reflecting on the unique experiences gained from visiting the Korean Demilitarized Zone." }
+      ]
+    }
+  ],
+  Shanghai: [
+    {
+      label: "Day 1 · The Bund & Skyline",
+      items: [
+        { type:"stop", time:"09:00", name:"The Bund", duration:"2 hrs", desc:"Start with a stroll along The Bund, a historic waterfront promenade. Marvel at the colonial-era architecture on one side and the futuristic Pudong skyline across the Huangpu River." },
+        { type:"stop", time:"11:15", name:"Nanjing Road Pedestrian Street", duration:"1 hr 30 min", desc:"Immerse yourself in one of the world's busiest shopping streets. Enjoy diverse shops, street food, and historic department stores. Grab lunch here." },
+        { type:"stop", time:"13:15", name:"Yu Garden & Old City God Temple", duration:"2 hrs", desc:"Explore the exquisite classical Chinese gardens and pavilions of Yu Garden. Wander through the vibrant market surrounding the Old City God Temple." },
+        { type:"stop", time:"16:00", name:"Lujiazui Financial District & Skyline", duration:"2 hrs 30 min", desc:"Cross to Pudong and be awed by the towering skyscrapers. Visit an observation deck (Shanghai Tower, Oriental Pearl, Jin Mao) for panoramic views." },
+        { type:"stop", time:"18:45", name:"Dinner with Bund View", duration:"1 hr 30 min", desc:"Enjoy a relaxing dinner in Pudong at a restaurant offering magnificent night views of The Bund's illuminated colonial buildings across the river." }
+      ]
+    },
+    {
+      label: "Day 2 · French Concession",
+      items: [
+        { type:"stop", time:"09:00", name:"Fuxing Park", duration:"1 hr 30 min", desc:"Start with a leisurely stroll through Fuxing Park, a charming French-style park where you can observe locals practicing tai chi, dancing, and playing mahjong." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Sinan Mansions" },
+        { type:"stop", time:"10:45", name:"Sinan Mansions", duration:"1 hr 30 min", desc:"Explore the historic Sinan Mansions area, a collection of beautifully preserved European-style villas housing upscale restaurants, cafes, and boutiques." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Tianzifang" },
+        { type:"stop", time:"12:25", name:"Tianzifang", duration:"2 hrs 30 min", desc:"Wander through the labyrinthine alleys of Tianzifang, a bohemian district filled with art studios, craft shops, cafes, and restaurants in renovated shikumen buildings." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Wukang Road" },
+        { type:"stop", time:"15:25", name:"Wukang Road & Wukang Mansion", duration:"1 hr 30 min", desc:"Walk along Wukang Road, renowned for its diverse architectural styles. Admire the iconic Wukang Mansion, a unique ship-like building at the intersection." },
+        { type:"travel", method:"walking", duration:"30 min", to:"Hengshan Road" },
+        { type:"stop", time:"17:05", name:"Hengshan Road", duration:"2 hrs", desc:"Conclude your day on Hengshan Road, known for its vibrant evening atmosphere, European-style architecture, and numerous restaurants and bars." }
+      ]
+    },
+    {
+      label: "Day 3 · Museums & Pudong",
+      items: [
+        { type:"stop", time:"09:00", name:"Shanghai Museum", duration:"2 hrs 30 min", desc:"Begin at the Shanghai Museum in People's Square. It houses a vast collection of bronze, ceramics, calligraphy, and more, offering a deep dive into China's rich history." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Shanghai Urban Planning Exhibition Center" },
+        { type:"stop", time:"11:45", name:"Shanghai Urban Planning Exhibition Center", duration:"1 hr 30 min", desc:"Discover the past, present, and future of Shanghai's urban development through detailed models and a massive scale model of the city." },
+        { type:"travel", method:"walking", duration:"15 min", to:"The Bund" },
+        { type:"stop", time:"14:00", name:"The Bund", duration:"1 hr 30 min", desc:"Stroll along the iconic waterfront promenade, offering breathtaking views of colonial-era buildings and the futuristic Lujiazui skyline." },
+        { type:"travel", method:"public transit", duration:"20 min", to:"Oriental Pearl TV Tower" },
+        { type:"stop", time:"16:00", name:"Oriental Pearl TV Tower & Lujiazui", duration:"2 hrs", desc:"Experience modern China with a visit to the Lujiazui financial district. Go up the iconic Oriental Pearl TV Tower for panoramic views." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Dinner in Lujiazui" },
+        { type:"stop", time:"18:10", name:"Dinner in Lujiazui", duration:"1 hr 30 min", desc:"Enjoy a modern Chinese dinner with spectacular views of the illuminated skyline to conclude your day." }
+      ]
+    },
+    {
+      label: "Day 4 · Zhujiajiao",
+      items: [
+        { type:"stop", time:"09:30", name:"Zhujiajiao Ancient Town", duration:"30 min", desc:"Arrive at Zhujiajiao, an ancient water town with a history of over 1,700 years. Known for its canals, bridges, and traditional architecture." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Fangsheng Bridge" },
+        { type:"stop", time:"10:15", name:"Fangsheng Bridge", duration:"45 min", desc:"Visit Fangsheng Bridge, the largest stone arch bridge in Zhujiajiao, offering panoramic views of the town and its waterways. A great spot for photos." },
+        { type:"travel", method:"walking", duration:"15 min", to:"North Street & Canal Boat Ride" },
+        { type:"stop", time:"11:10", name:"North Street (Bei Dajie) & Canal Boat Ride", duration:"2 hrs", desc:"Stroll along North Street, the best-preserved ancient street in Zhujiajiao. Enjoy a relaxing gondola ride along the canals for a unique perspective of the town." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Kezhi Garden" },
+        { type:"stop", time:"13:25", name:"Kezhi Garden", duration:"1 hr", desc:"Explore Kezhi Garden, a large traditional Chinese garden combining classical and Western architectural styles, featuring beautiful pavilions, ponds, and rockeries." },
+        { type:"travel", method:"walking", duration:"15 min", to:"Departure Point" },
+        { type:"stop", time:"14:40", name:"Zhujiajiao Departure", duration:"30 min", desc:"Conclude your visit to Zhujiajiao and head back to the main entrance area for your return journey to Shanghai." }
+      ]
+    }
+  ],
+  "Xi'an": [
+    {
+      label: "Day 1 · Terracotta Army",
+      items: [
+        { type:"stop", time:"08:30", name:"Depart from Xi'an Bell Tower", duration:"—", desc:"Start your day trip to the Terracotta Army from the historic center of Xi'an, near the iconic Bell Tower." },
+        { type:"stop", time:"09:30", name:"Terracotta Army Museum", duration:"3 hrs", desc:"Explore the awe-inspiring collection of life-sized terracotta warriors, horses, and chariots guarding the tomb of Emperor Qin Shi Huang — a UNESCO World Heritage site." },
+        { type:"stop", time:"12:30", name:"Lunch Break", duration:"45 min", desc:"Enjoy a well-deserved lunch near the Terracotta Army complex, offering a variety of local Shaanxi cuisine." },
+        { type:"stop", time:"13:30", name:"Emperor Qinshihuang's Mausoleum Site Park", duration:"2 hrs", desc:"Visit the burial mound of the first Emperor of China, Qin Shi Huang. The site offers insights into the vast imperial complex and its historical significance." },
+        { type:"stop", time:"16:45", name:"Arrive back in Xi'an City Center", duration:"—", desc:"Conclude your day trip back in the heart of Xi'an, ready to reflect on the historical wonders you've witnessed." }
+      ]
+    },
+    {
+      label: "Day 2 · Muslim Quarter",
+      items: [
+        { type:"stop", time:"09:00", name:"Great Mosque of Xi'an", duration:"1 hr 30 min", desc:"Begin at one of China's oldest and most well-preserved mosques, blending traditional Chinese architecture with Islamic art. Explore its beautiful courtyards and prayer halls." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Gao's Grand Courtyard" },
+        { type:"stop", time:"10:40", name:"Gao's Grand Courtyard", duration:"1 hr 10 min", desc:"Visit a beautifully restored traditional residence of a Ming Dynasty official. Discover intricate architecture, shadow puppet shows, and cultural exhibits." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Muslim Street" },
+        { type:"stop", time:"11:55", name:"Beiyuanmen Street (Muslim Street)", duration:"2 hrs 5 min", desc:"Immerse yourself in the bustling heart of the Muslim Quarter. Sample delicious street food, browse unique souvenirs, and experience the vibrant atmosphere." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Drum Tower" },
+        { type:"stop", time:"14:10", name:"Drum Tower", duration:"1 hr", desc:"Stand before the magnificent Drum Tower. Climb to the top for panoramic views and learn about its history as the timekeeper of ancient Xi'an." },
+        { type:"travel", method:"walking", duration:"10 min", to:"Bell Tower" },
+        { type:"stop", time:"15:25", name:"Bell Tower", duration:"1 hr", desc:"Visit the iconic Bell Tower, a symbol of Xi'an, standing at the city's geographical center. It offers insights into ancient city life and great views of the city." }
+      ]
+    }
+  ]
+};
+
+const travelIcons = {
+  walking: "directions_walk",
+  driving: "directions_car",
+  "public transit": "directions_transit",
+  taxi: "local_taxi"
+};
+
+let currentCity = "Beijing";
+let currentDayIndex = 0;
+
+function renderDayTabs() {
+  const tabs = document.getElementById("day-tabs");
+  const days = DAY_PLANS[currentCity];
+  tabs.innerHTML = days.map((d, i) => {
+    const active = i === currentDayIndex;
+    return `<button onclick="selectDay(${i})" class="px-5 py-2.5 rounded-full flex items-center gap-2 whitespace-nowrap font-bold font-headline transition-all duration-200 ${
+      active
+        ? "bg-primary text-white shadow-md scale-105"
+        : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"
+    }">
+      <span class="material-symbols-outlined text-[18px]" style="font-variation-settings:'FILL' ${active?1:0},'wght' 400,'GRAD' 0,'opsz' 20">calendar_today</span>
+      Day ${i + 1}
+    </button>`;
+  }).join("");
+}
+
+function renderTimeline() {
+  const container = document.getElementById("day-timeline");
+  const items = DAY_PLANS[currentCity][currentDayIndex].items;
+  const stops = items.filter(x => x.type === "stop");
+
+  container.innerHTML = `<div class="relative">${items.map((item, idx) => {
+    if (item.type === "stop") {
+      const stopNum = items.slice(0, idx + 1).filter(x => x.type === "stop").length;
+      const isLast = stopNum === stops.length;
+      return `
+        <div class="flex gap-4 ${isLast ? "" : "mb-1"}">
+          <!-- Left: time + line -->
+          <div class="flex flex-col items-center w-14 shrink-0">
+            <span class="text-xs font-bold text-primary font-headline">${item.time}</span>
+            <div class="w-3 h-3 rounded-full bg-primary mt-1 shrink-0 shadow-sm ring-2 ring-primary/20"></div>
+            ${!isLast ? `<div class="w-0.5 flex-1 bg-outline-variant min-h-[2rem] mt-1"></div>` : ""}
+          </div>
+          <!-- Right: card -->
+          <div class="flex-1 pb-5">
+            <div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm">
+              <div class="flex justify-between items-start gap-2 mb-1">
+                <h4 class="font-bold text-on-surface font-headline leading-tight">${item.name}</h4>
+                ${item.duration && item.duration !== "—" ? `<span class="text-xs font-bold text-slate-400 whitespace-nowrap bg-surface-container px-2 py-0.5 rounded-full">${item.duration}</span>` : ""}
+              </div>
+              <p class="text-sm text-on-surface-variant leading-relaxed">${item.desc}</p>
+            </div>
+          </div>
+        </div>`;
+    } else {
+      // travel connector
+      const icon = travelIcons[item.method] || "directions";
+      return `
+        <div class="flex gap-4 mb-1">
+          <div class="flex flex-col items-center w-14 shrink-0">
+            <div class="w-0.5 flex-1 bg-outline-variant"></div>
+          </div>
+          <div class="flex items-center gap-2 py-1 pb-3 text-xs text-slate-400 font-medium">
+            <span class="material-symbols-outlined text-[16px] text-slate-400">${icon}</span>
+            <span class="capitalize">${item.method}</span>
+            <span class="text-slate-300">·</span>
+            <span>${item.duration}</span>
+          </div>
+        </div>`;
+    }
+  }).join("")}</div>`;
+}
+
+function selectDay(dayIndex) {
+  currentDayIndex = dayIndex;
+  renderDayTabs();
+  renderTimeline();
+}
+
+// City key mapping from index.html params
+const CITY_KEY_MAP = {
+  hk: "Hong Kong",
+  seoul: "Seoul",
+  shanghai: "Shanghai",
+  xian: "Xi'an",
+  beijing: "Beijing"
+};
+
+// Read URL params to pre-select city + day
+const params = new URLSearchParams(window.location.search);
+const cityParam = params.get("city");
+const dayParam = parseInt(params.get("day"), 10);
+
+if (cityParam && CITY_KEY_MAP[cityParam] && DAY_PLANS[CITY_KEY_MAP[cityParam]]) {
+  currentCity = CITY_KEY_MAP[cityParam];
+}
+if (dayParam >= 1 && dayParam <= (DAY_PLANS[currentCity] || []).length) {
+  currentDayIndex = dayParam - 1;
+}
+
+// Update header title
+document.getElementById("page-city-title").textContent = currentCity;
+
+// Scroll to day plans section
+if (cityParam) {
+  window.addEventListener("load", () => {
+    const section = document.getElementById("day-plans-section");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+// Init
+renderDayTabs();
+renderTimeline();
+</script>
+</body></html>

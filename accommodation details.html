@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#c5eccc",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-fixed": "#1c1c11",
+              "on-background": "#191c1d",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary-container": "#486a51",
+              "tertiary": "#605f50",
+              "surface-variant": "#e1e3e4",
+              "surface-tint": "#24657e",
+              "background": "#f8f9fa",
+              "outline": "#70787d",
+              "inverse-on-surface": "#f0f1f2",
+              "on-primary-container": "#0a566e",
+              "secondary-fixed-dim": "#aad0b1",
+              "on-tertiary-fixed-variant": "#48473a",
+              "on-primary-fixed": "#001f2a",
+              "on-tertiary-container": "#515042",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed-dim": "#c9c7b5",
+              "surface": "#f8f9fa",
+              "primary-fixed": "#bde9ff",
+              "secondary-container": "#c2e9c9",
+              "primary": "#24657e",
+              "on-primary-fixed-variant": "#004d64",
+              "on-secondary-fixed-variant": "#2c4e36",
+              "outline-variant": "#c0c8cd",
+              "on-surface-variant": "#40484c",
+              "primary-fixed-dim": "#93cfeb",
+              "tertiary-container": "#c5c2b0",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#93cfeb",
+              "surface-container": "#edeeef",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "primary-container": "#8ecae6",
+              "error-container": "#ffdad6",
+              "secondary": "#43664d",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed": "#e6e3d0",
+              "inverse-surface": "#2e3132",
+              "on-secondary-fixed": "#00210e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+<!-- TopAppBar (Suppressed per logic: Focused detail view usually uses simple back action) -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 h-16 bg-surface/70 backdrop-blur-md z-50">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="text-xl font-headline font-bold text-sky-800 tracking-tighter">Ethereal Explorer</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface" data-icon="share">share</span>
+</button>
+</header>
+<main class="pt-20 pb-24 max-w-5xl mx-auto px-4 sm:px-8">
+<!-- Hero Photo Gallery (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[500px] mb-12">
+<div class="md:col-span-2 md:row-span-2 rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxurious boutique hotel exterior with whitewashed walls and vibrant blue shutters overlooking a calm turquoise ocean at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu66EPO5Ip8q6E95lUsuoki6WjRIYKoMuwPofeuz7Dl4WMCwlhGP5w7tTmReE-Hj0p1IV6oon7-akgYTnw7dB5sZ5hUOblcqb3kRuOGmEOI2ADcO-XucAjQBrRVJJtkmp7lpNSFoubWgSn4YsBcDxHAc_x-Ocg0m31gJU7yeIgMGW0uKrUFIb32ATkeRhKwUr7Eqzl295HDQ2w7RKcuTlK_73O7HOhsoBo9y9dZCZX7cVdcCLT3JaoiciBiwOom7rsQl6BYk4lb4_H"/>
+</div>
+<div class="md:col-span-1 rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Interior of a luxury hotel suite with minimalist wooden furniture and panoramic windows showing a mountain view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsKxEIRSIZoFF_4W4X_wx7jFYLdk6rc6CAB8Jx925UfwPUWX-CXxWlIKLCP6O_Z1y7O7tLkYM_-2AVGalddp4Qc1RiSsf3AXC0NTVgtPT-mVJLMpBX80zQRvKEJTtBCPLNcp4TvBnbHhZFoeMKeYLYw0rIYOaViv-oMQNDAIPY3ybU7Nxlcrzp5frigKmDWd5UMZYnRQ_FjmYn1oGZAbWV_HKDZmRSNbRiLS4WF5h7fSx7VlX02CRFAW4piNjtX9Q3h3KCbfJ5PGM1"/>
+</div>
+<div class="md:col-span-1 rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sparkling infinity pool edge merging with the horizon of a deep blue sea under a clear morning sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9bZbUfZUM8qyLJf_8QMRjPM1VM4vW1r36U0cML_oKi7bEk_d5wugPNrbiK_W2RpSFh0Y68Az8qOL-URecKH5ASZuFblT2d-to2arsdNWPfexuz0GEK-0spfrDkqPNDIsvX2ci-FR1x1qHpQqvu4WiFYOvAlQ8SNZnmMqhbT3VUzQZy9Oe8JF-KWh6JephhTjmsCnhKI8iekPcUFarDEvApy71V3G-GiYhrSUzLMGVYIB8lRK5jlhb-Bs1G4p9n4gqBSeKmsQZVbCr"/>
+</div>
+<div class="md:col-span-2 rounded-[2rem] overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Lush tropical garden pathway with soft evening lighting and shadows of palm trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ8JOFIGSzz9zMk791xJ5ekmUvLe5uu0_uLslXobJfLmtYnt_u_yLICeT-w2rotcivKNE5lFicxCoFIHrw9bcTNKugNe70_jrL9E0np5rcVH74ogmrn6Fhh1P-djue3ysjzD3C7721YuoeAn7qCrU9myNNP49KK-UF1IgWOlf8dUmOsb4T57lG1P3UsKMpf5uJuWFb1cJcXV7RbTYoqL7xyMOpNPN6SszhwHsjHEB0-QE5ARsXxcxZ_wDd2zkPTH_l7OvjPQHqS3GW"/>
+<div class="absolute inset-0 bg-on-surface/20 flex items-center justify-center">
+<button class="bg-surface-container-lowest/90 backdrop-blur-md px-6 py-3 rounded-full font-headline font-bold text-sm tracking-tight hover:bg-white transition-all">
+                        View All 24 Photos
+                    </button>
+</div>
+</div>
+</section>
+<!-- Main Content Grid (Asymmetrical) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Details -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Title & Location -->
+<div>
+<span class="font-label text-primary uppercase tracking-[0.2em] font-bold text-xs mb-2 block">Premium Stay</span>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tight mb-4 leading-tight">Azure Horizon Estate</h1>
+<div class="flex items-center gap-2 text-secondary font-medium">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<p class="text-lg">Santorini, South Aegean, Greece</p>
+</div>
+</div>
+<!-- Booking Meta Chips -->
+<div class="flex flex-wrap gap-4">
+<div class="bg-surface-container-low px-6 py-4 rounded-[1.5rem] flex flex-col gap-1">
+<span class="text-[10px] uppercase font-bold tracking-widest text-outline">Confirmation</span>
+<span class="font-headline font-bold text-on-surface">#EX-8829-410</span>
+</div>
+<div class="bg-surface-container-low px-6 py-4 rounded-[1.5rem] flex flex-col gap-1">
+<span class="text-[10px] uppercase font-bold tracking-widest text-outline">Duration</span>
+<span class="font-headline font-bold text-on-surface">4 Nights</span>
+</div>
+<div class="bg-surface-container-low px-6 py-4 rounded-[1.5rem] flex flex-col gap-1">
+<span class="text-[10px] uppercase font-bold tracking-widest text-outline">Status</span>
+<span class="font-headline font-bold text-secondary">Confirmed</span>
+</div>
+</div>
+<!-- Amenities Section -->
+<section>
+<h2 class="text-2xl font-headline font-bold mb-6 tracking-tight">Curated Amenities</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="pool">pool</span>
+</div>
+<span class="font-medium text-on-surface-variant">Infinity Pool</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="wifi">wifi</span>
+</div>
+<span class="font-medium text-on-surface-variant">Fiber Wi-Fi</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+</div>
+<span class="font-medium text-on-surface-variant">Private Chef</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+</div>
+<span class="font-medium text-on-surface-variant">Full Spa</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="ac_unit">ac_unit</span>
+</div>
+<span class="font-medium text-on-surface-variant">Climate Control</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</div>
+<span class="font-medium text-on-surface-variant">Yoga Studio</span>
+</div>
+</div>
+</section>
+<!-- Check-in Section -->
+<section class="bg-surface-container-low p-8 rounded-[2rem] space-y-8">
+<h2 class="text-2xl font-headline font-bold tracking-tight">Check-in / Out</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<div class="flex items-center gap-2 mb-3 text-primary">
+<span class="material-symbols-outlined" data-icon="login">login</span>
+<span class="font-bold text-sm uppercase tracking-widest">Arrival</span>
+</div>
+<p class="font-headline text-xl font-bold mb-2">Check-in: 3:00 PM</p>
+<p class="text-on-surface-variant leading-relaxed text-sm">Keyless entry. Your unique access code will be sent to your mobile device 2 hours prior to arrival.</p>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-3 text-primary">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-bold text-sm uppercase tracking-widest">Departure</span>
+</div>
+<p class="font-headline text-xl font-bold mb-2">Check-out: 11:00 AM</p>
+<p class="text-on-surface-variant leading-relaxed text-sm">Please leave your keycards in the drop-box by the concierge desk. Late check-out available on request.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Map & Actions -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Floating Map Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-4 shadow-[0_12px_24px_rgba(25,28,29,0.06)] overflow-hidden">
+<div class="w-full h-64 rounded-[1.5rem] bg-surface-container-high relative overflow-hidden mb-6">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Minimalist abstract map of a coastal city with soft blue and gray tones" data-location="Santorini" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq5cyEaI3W_GyAnbrq9zjWYEcUvcaZwo6Aryc0-qeL80Pc5N7UgUm51VChj4OoZII134-JkVRaqcHiczta7CvCQiaX3Np-d0twi6BQzn78oie07u0lRCLQdsyVOGg8eejbgZYXFpVAwDSVXXNNv9-k1DczrHTQthEY_EFWn7TcYqp1YMdMFMy-YPJmBY5pgz7nPfs90lniAB-L1g3XLPGx16cl3Ao9WPCa_0AtrzG25hq2Yja6hmgNm0zaTyeU4oU9JjkGinNQ6-w-"/>
+<!-- Simulated Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white ring-8 ring-primary/20 animate-pulse">
+<span class="material-symbols-outlined" data-icon="hotel">hotel</span>
+</div>
+</div>
+</div>
+<div class="px-2 space-y-6">
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-outline mb-2">Address</h3>
+<p class="font-medium text-on-surface leading-snug">Oia 847 02, Santorini, Greece</p>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface-container-high h-12 rounded-full flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="directions">directions</span>
+<span class="font-bold text-sm">Directions</span>
+</button>
+<button class="flex-1 bg-surface-container-high h-12 rounded-full flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<span class="font-bold text-sm">Contact</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Host Card -->
+<div class="bg-secondary-container/20 rounded-[2rem] p-8 border border-secondary-container/30">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional hotel concierge woman in a navy suit with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH8sMgK_HZAsTfptzdzJOnk8AJouDYVjvCdC5zOcRmL1nEdpDsMsXTGMAf4IiMptStniNvLVaronKeeEqJLp91-4x51PK-5Xq5lkGUc1--U1SkGYSzEZ01YWmfuqQaNkI1YGuxbNyppgk5HncPlF1Grf3sS3HhYaekBhBYKy12q-CQaCKgCPOkGIVMUryxMhXhpciywwY2kq45qeHGqsnC10XVmGj3hbisiKOEmk0RWxtEm7mmW7d0R_WBtnPlH7WTc93oe1gHpZJG"/>
+</div>
+<div>
+<p class="font-headline font-bold">Elena K.</p>
+<p class="text-xs text-secondary font-medium tracking-wide">Elite Concierge</p>
+</div>
+</div>
+<p class="text-sm text-on-secondary-container leading-relaxed mb-6">
+                        "Welcome to Azure Horizon. I am your dedicated concierge for this stay. Whether you need a yacht rental or a sunset table at Ammoudi Bay, I am here to assist."
+                    </p>
+<button class="w-full bg-secondary text-white h-14 rounded-full font-headline font-bold text-sm tracking-tight hover:opacity-90 transition-opacity">
+                        Message Concierge
+                    </button>
+</div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar (Only for top-level, but kept here for structural integrity of the "Shell") -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/70 backdrop-blur-xl z-50 shadow-[0_-12px_24px_rgba(25,28,29,0.06)] md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-headline text-[11px] uppercase tracking-wider font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-sky-100 text-sky-900 rounded-full px-6 py-2 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-headline text-[11px] uppercase tracking-wider font-bold">Itinerary</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-6 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-headline text-[11px] uppercase tracking-wider font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

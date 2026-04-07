@@ -1,0 +1,48 @@
+# Your Day Plan
+
+## 1. Fuxing Park
+Time: 09:00
+Duration: 1 hour 30 minutes
+
+Start your day with a leisurely stroll through Fuxing Park, a charming example of a French-style park where you can observe locals practicing tai chi, dancing, and playing mahjong in the morning.
+
+### Travel to Sinan Mansions
+Method: walking
+Time: 15 minutes
+
+## 2. Sinan Mansions
+Time: 10:45
+Duration: 1 hour 30 minutes
+
+Explore the historic Sinan Mansions area, a collection of beautifully preserved European-style villas, many of which now house upscale restaurants, cafes, and boutiques. It offers a glimpse into Shanghai's past elegance.
+
+### Travel to Tianzifang
+Method: walking
+Time: 15 minutes
+
+## 3. Tianzifang
+Time: 12:25
+Duration: 2 hours 30 minutes
+
+Wander through the labyrinthine alleys of Tianzifang, a bohemian district filled with art studios, craft shops, cafes, and restaurants housed in renovated traditional "shikumen" buildings. This is an excellent spot for lunch and some unique souvenir shopping.
+
+### Travel to Wukang Road & Wukang Mansion
+Method: walking
+Time: 10 minutes
+
+## 4. Wukang Road & Wukang Mansion
+Time: 15:25
+Duration: 1 hour 30 minutes
+
+Take a leisurely walk along Wukang Road, renowned for its diverse architectural styles and historic residences. Admire the iconic Wukang Mansion, a unique ship-like building at the intersection, and the charming tree-lined avenue.
+
+### Travel to Hengshan Road
+Method: walking
+Time: 30 minutes
+
+## 5. Hengshan Road
+Time: 17:05
+Duration: 2 hours
+
+Conclude your day on Hengshan Road, known for its vibrant evening atmosphere, European-style architecture, and numerous restaurants and bars. Enjoy dinner and soak in the lively ambiance.
+
