@@ -7,73 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary": "#24657e",
-        "on-primary": "#ffffff",
-        "primary-container": "#8ecae6",
-        "on-primary-container": "#0a566e",
-        "primary-fixed": "#bde9ff",
-        "primary-fixed-dim": "#93cfeb",
-        "on-primary-fixed": "#001f2a",
-        "on-primary-fixed-variant": "#004d64",
-        "secondary": "#43664d",
-        "on-secondary": "#ffffff",
-        "secondary-container": "#c2e9c9",
-        "on-secondary-container": "#486a51",
-        "secondary-fixed": "#c5eccc",
-        "secondary-fixed-dim": "#aad0b1",
-        "on-secondary-fixed": "#00210e",
-        "on-secondary-fixed-variant": "#2c4e36",
-        "tertiary": "#605f50",
-        "on-tertiary": "#ffffff",
-        "tertiary-container": "#c5c2b0",
-        "on-tertiary-container": "#515042",
-        "tertiary-fixed": "#e6e3d0",
-        "tertiary-fixed-dim": "#c9c7b5",
-        "on-tertiary-fixed": "#1c1c11",
-        "on-tertiary-fixed-variant": "#48473a",
-        "error": "#ba1a1a",
-        "on-error": "#ffffff",
-        "error-container": "#ffdad6",
-        "on-error-container": "#93000a",
-        "background": "#f8f9fa",
-        "on-background": "#191c1d",
-        "surface": "#f8f9fa",
-        "surface-dim": "#d9dadb",
-        "surface-bright": "#f8f9fa",
-        "surface-container-lowest": "#ffffff",
-        "surface-container-low": "#f3f4f5",
-        "surface-container": "#edeeef",
-        "surface-container-high": "#e7e8e9",
-        "surface-container-highest": "#e1e3e4",
-        "surface-variant": "#e1e3e4",
-        "surface-tint": "#24657e",
-        "on-surface": "#191c1d",
-        "on-surface-variant": "#40484c",
-        "outline": "#70787d",
-        "outline-variant": "#c0c8cd",
-        "inverse-surface": "#2e3132",
-        "inverse-on-surface": "#f0f1f2",
-        "inverse-primary": "#93cfeb",
-      },
-      fontFamily: {
-        "headline": ["Plus Jakarta Sans"],
-        "body": ["Inter"],
-        "label": ["Inter"]
-      },
-      borderRadius: {
-        "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem",
-        "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"
-      },
-    },
-  },
-}
-</script>
+<script src="tailwind.config.js"></script>
 <style>
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -201,9 +135,6 @@ tailwind.config = {
         <button onclick="switchDay('hk','2')" id="day-hk-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Wed May 20</button>
         <button onclick="switchDay('hk','3')" id="day-hk-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Thu May 21</button>
         <button onclick="switchDay('hk','4')" id="day-hk-4" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Fri May 22</button>
-        <a id="dayplan-link-hk" href="city details.html?city=hk&day=1" class="flex-none flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-headline font-semibold text-xs whitespace-nowrap active:scale-95 transition-transform">
-          <span class="material-symbols-outlined text-[14px]">event_note</span>Full Plan
-        </a>
       </div>
       <div id="daypanel-hk-1" class="day-panel space-y-4">
         <div class="flex items-center gap-2 mb-1">
@@ -215,25 +146,67 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Victoria Peak</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Take the Peak Tram for panoramic views over the city and harbour. Best in the morning before clouds roll in.</p>
-            </div>
-          </div>
-          <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
-            <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
               <h4 class="font-headline font-semibold mt-0.5">Central District</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore SoHo, the mid-levels escalator, and colonial-era landmarks. Great street food around the market areas.</p>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Begin your day in the bustling heart of Hong Kong's financial and commercial district. Explore iconic skyscrapers and historical colonial buildings like the Former French Mission Building or St. John's Cathedral.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Star Ferry Crossing</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Take the iconic Star Ferry from Central to Tsim Sha Tsui for the classic harbour view at dusk.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">10:50</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Victoria Peak</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Ascend to Victoria Peak via the historic Peak Tram for breathtaking panoramic views of Hong Kong Island, Kowloon, and Victoria Harbour. Enjoy the Sky Terrace 428 and explore the shops and attractions at the Peak Tower.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">13:20</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Lunch in Central</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a delicious lunch in Central, offering a wide array of dining options from local Cantonese fare in a traditional cha chaan teng to international cuisine in a modern restaurant.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">14:35</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Star Ferry Ride</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Experience the iconic Star Ferry crossing Victoria Harbour. This scenic ride offers stunning views of both Hong Kong Island and the Tsim Sha Tsui skyline, a true Hong Kong classic.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">15:50</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Mid-Levels Escalator & SoHo Exploration</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore the fascinating Mid-Levels Escalator system, the longest outdoor covered escalator system in the world. Discover the vibrant streets of SoHo and its trendy boutiques, art galleries, and historic alleyways.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">17:35</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dinner in SoHo/Central</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Conclude your day with dinner in the lively SoHo district, known for its diverse culinary scene ranging from casual eateries to upscale restaurants, or find a spot in the broader Central area.</p>
             </div>
           </div>
         </div>
@@ -248,25 +221,56 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Temple Street & Markets</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Browse street markets in Jordan and Yau Ma Tei for local snacks and souvenirs.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Ladies' Market</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore one of Hong Kong's most famous street markets, offering a wide array of clothing, accessories, souvenirs, and electronics. Practice your bargaining skills!</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Tsim Sha Tsui Waterfront</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">The Avenue of Stars, Museum of History, and the famous promenade facing Hong Kong Island.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">11:15</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Lunch in Mong Kok</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy authentic local Cantonese cuisine in one of the many eateries around Mong Kok. Try dim sum, congee, or roasted meats.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening · 8 PM</span>
-              <h4 class="font-headline font-semibold mt-0.5">Symphony of Lights</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">World's largest permanent light and sound show, viewable from the Tsim Sha Tsui waterfront.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:45</span>
+                <span class="text-on-surface-variant text-xs">· 3h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Tsim Sha Tsui Promenade & Avenue of Stars</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Stroll along the iconic waterfront promenade, offering stunning views of Victoria Harbour and the Hong Kong Island skyline. Visit the Avenue of Stars to see tributes to Hong Kong's film industry.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">16:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dinner in Tsim Sha Tsui</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Dine at one of the many restaurants in Tsim Sha Tsui, ranging from casual local eateries to upscale international dining, with options for harbour views.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">18:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Symphony of Lights Viewing</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Experience the spectacular nightly multimedia show, "A Symphony of Lights," featuring synchronized building lights, laser beams, and music across Victoria Harbour. Find a good spot along the Tsim Sha Tsui Promenade.</p>
             </div>
           </div>
         </div>
@@ -281,25 +285,67 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Ngong Ping 360 Cable Car</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Scenic cable car from Tung Chung with stunning mountain views on the way up to Ngong Ping village.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 45m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Tung Chung Cable Car Terminal</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day by taking the Ngong Ping 360 cable car from Tung Chung to Ngong Ping Village. Enjoy panoramic views of Lantau Island and the South China Sea during the ride.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Mid-Morning</span>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:45</span>
+                <span class="text-on-surface-variant text-xs">· 45m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Ngong Ping Village</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore the cultural themed village with various shops and restaurants. This is the gateway to the Big Buddha and Po Lin Monastery.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">10:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
               <h4 class="font-headline font-semibold mt-0.5">Tian Tan Buddha (Big Buddha)</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Climb 268 steps to the world's largest outdoor seated bronze Buddha. Visit Po Lin Monastery below.</p>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Ascend the 268 steps to visit the magnificent bronze statue of Tian Tan Buddha, offering serene views of the surrounding mountains.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Po Lin Monastery</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Visit the grand Buddhist monastery next to the Big Buddha. Admire the beautiful temples and enjoy a vegetarian lunch at its famous restaurant.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">14:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
               <h4 class="font-headline font-semibold mt-0.5">Tai O Fishing Village</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Charming village on stilts – shrimp paste, boat tours, and a chance to spot pink dolphins.</p>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Discover the "Venice of Hong Kong," a charming stilt house village. Take a boat ride to spot pink dolphins (seasonal) and explore local markets.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">17:15</span>
+                <span class="text-on-surface-variant text-xs">· 1h 45m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Citygate Outlets</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Conclude your day with some shopping at Citygate Outlets, located conveniently near the Tung Chung MTR station, before heading back.</p>
             </div>
           </div>
         </div>
@@ -307,7 +353,7 @@ tailwind.config = {
       <div id="daypanel-hk-4" class="day-panel hidden space-y-4">
         <div class="flex items-center gap-2 mb-1">
           <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">4</div>
-          <p class="font-headline font-bold">Optional Day</p>
+          <p class="font-headline font-bold">Macau Day Trip</p>
         </div>
         <div class="bg-amber-50 rounded-2xl p-4 mb-3 border border-amber-200">
           <p class="text-amber-800 font-semibold text-sm">✈️ Flight to Seoul tomorrow at 09:45 — pack tonight!</p>
@@ -315,27 +361,58 @@ tailwind.config = {
         <div class="pl-10 space-y-6 relative">
           <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
           <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-outline">Option A</span>
-              <h4 class="font-headline font-semibold mt-0.5">Lamma Island</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Car-free island by ferry — seafood restaurants, hiking trails, and a relaxed local vibe.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Ruins of St. Paul's & Monte Fort</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore the iconic facade of the Ruins of St. Paul's and ascend to Monte Fort for panoramic views of Macau's historic center. These adjacent UNESCO World Heritage sites offer a glimpse into Macau's colonial past.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-outline">Option B</span>
-              <h4 class="font-headline font-semibold mt-0.5">Macau Day Trip</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">1-hour ferry to the "Las Vegas of Asia" — baroque Portuguese architecture, Ruins of St. Paul's, and casinos.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">10:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h 15m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Senado Square</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Immerse yourself in the vibrant atmosphere of Senado Square, a UNESCO World Heritage site with charming Portuguese colonial architecture, mosaic pavements, and bustling shops.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-outline">Option C</span>
-              <h4 class="font-headline font-semibold mt-0.5">Lantau Hikes</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Sunrise hike to Lantau Peak (934 m) or sections of the Lantau Trail with dramatic coastal views.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:15</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">A-Ma Temple</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Visit the oldest temple in Macau, dedicated to the goddess Mazu, protector of seafarers and fishermen. Experience the rich cultural and spiritual heritage at this serene temple.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">13:35</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Macau Tower</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Ascend to the observation deck of Macau Tower for breathtaking panoramic views of the city, Pearl River Delta, and beyond. For the adventurous, consider the bungee jump or skywalk.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">15:25</span>
+                <span class="text-on-surface-variant text-xs">· 5h 5m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">The Venetian Macao</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Experience the grandeur of The Venetian Macao, a luxurious resort with an impressive casino, expansive shopping arcade with gondola rides, and world-class entertainment. Enjoy dinner and explore this magnificent property.</p>
             </div>
           </div>
         </div>
@@ -433,9 +510,6 @@ tailwind.config = {
         <button onclick="switchDay('seoul','3')" id="day-seoul-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Mon May 25</button>
         <button onclick="switchDay('seoul','4')" id="day-seoul-4" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Tue May 26</button>
         <button onclick="switchDay('seoul','5')" id="day-seoul-5" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Wed May 27</button>
-        <a id="dayplan-link-seoul" href="city details.html?city=seoul&day=1" class="flex-none flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-headline font-semibold text-xs whitespace-nowrap active:scale-95 transition-transform">
-          <span class="material-symbols-outlined text-[14px]">event_note</span>Full Plan
-        </a>
       </div>
       <div id="daypanel-seoul-1" class="day-panel space-y-4">
         <div class="flex items-center gap-2 mb-1">
@@ -447,17 +521,45 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Check-in & Gangnam Explore</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Settle into Hotel Anteroom Seoul Gangnam. Explore the upscale Gangnam district — K-drama vibes and bustling streets.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Gyeongbokgung Palace</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your historical journey at the grandest of Seoul's five palaces, the primary royal palace of the Joseon Dynasty. Witness the changing of the guard ceremony (check times) and explore its majestic grounds, including Geunjeongjeon Hall and Gyeonghoeru Pavilion.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Garosu-gil Street</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Trendy tree-lined boulevard with cafés, boutiques, and some of Seoul's best restaurants for a first dinner.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">11:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">National Folk Museum of Korea</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Located within the Gyeongbokgung grounds, this museum offers a deep dive into the daily lives and culture of the Korean people from prehistoric times to the modern era, with extensive exhibits on traditional clothing, food, and housing.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Bukchon Hanok Village</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Wander through this charming traditional Korean village nestled between Gyeongbokgung and Changdeokgung Palaces. Admire the beautifully preserved hanok (traditional houses) and enjoy panoramic views of the city, experiencing a glimpse into Seoul's past.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">14:30</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Changdeokgung Palace & Huwon (Secret Garden)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A UNESCO World Heritage site, this palace is renowned for its architectural harmony with its natural surroundings. Don't miss the tranquil Secret Garden (Huwon), a masterpiece of Korean landscaping (note: Huwon often requires a separate, timed tour).</p>
             </div>
           </div>
         </div>
@@ -472,25 +574,67 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Gyeongbokgung Palace</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Joseon dynasty's main royal palace. Changing of the Guard at 10 AM and 2 PM. Rent hanbok for free entry!</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Hongdae Street Art & Shopping Streets</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day exploring the vibrant street art, independent fashion boutiques, and lively atmosphere of Hongdae, known for its youthful energy.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Bukchon Hanok Village</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Winding alleys lined with 600-year-old traditional Korean houses. One of Seoul's most photogenic spots.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">10:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Coffee Break at a Hongdae Cafe</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a relaxing coffee and soak in the local ambiance at one of Hongdae's trendy cafes, particularly around the Yeonnam-dong area.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Late Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Insadong & Cheonggyecheon Stream</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Artsy street with teashops and crafts, then a walk along the restored urban stream.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:10</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Lunch & Gangnam Station Area Exploration</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Arrive in Gangnam, a symbol of modern Seoul. Have lunch at one of the many upscale restaurants near Gangnam Station, then explore the bustling streets and high-rise buildings.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">13:40</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Starfield COEX Mall & Byeolmadang Library</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Visit the impressive Starfield COEX Mall, home to the iconic Byeolmadang Library, a grand open public library that is a popular photo spot.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">15:40</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Itaewon Global Village & Shopping</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore Itaewon, known for its diverse international atmosphere, unique boutiques, and global cuisine. Discover hidden alleys and street art.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">17:40</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dinner in Itaewon</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Conclude your day with dinner in Itaewon, choosing from a wide array of international restaurants and enjoying the evening ambiance of this lively district.</p>
             </div>
           </div>
         </div>
@@ -505,25 +649,45 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Hongdae</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">University district and center of Seoul's indie music/art scene. Street performances, quirky cafés, vintage shops.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Gwangjang Market</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day with a traditional Korean breakfast and explore one of Korea's oldest and largest traditional markets, famous for its street food like bindaetteok (mung bean pancakes), mayak gimbap, and tteokbokki.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Itaewon</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">International neighborhood with incredible food diversity, Haebangchon hill, and the famous Gyeongnidan-gil.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">11:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Bukchon Hanok Village</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Wander through this traditional Korean village with beautifully preserved hanok houses, offering a glimpse into Seoul's past and a peaceful atmosphere after your market visit.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">N Seoul Tower (Namsan)</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Hike or cable car up Namsan for panoramic night views. The iconic "love locks" wall is here.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">14:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Insadong</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Immerse yourself in Korean culture in Insadong, a vibrant neighborhood known for its traditional tea houses, art galleries, antique shops, and street performances. Enjoy a traditional tea or snack.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">18:00</span>
+                <span class="text-on-surface-variant text-xs">· 3h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dongdaemun Design Plaza (DDP) & Night Market</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Marvel at the futuristic architecture of DDP. As evening falls, dive into the bustling Dongdaemun Night Market, famous for its fashion, street food, and late-night shopping. Enjoy dinner and soak in the lively atmosphere.</p>
             </div>
           </div>
         </div>
@@ -538,25 +702,45 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Gwangjang Market</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Seoul's oldest market — try bindaetteok, mayak gimbap, and raw beef. Famous from Netflix's Street Food.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">10:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Suwon Hwaseong Fortress</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A UNESCO World Heritage site, this magnificent fortress wall encircles the city of Suwon. It was built in the late 18th century by King Jeongjo of the Joseon Dynasty. Visitors can walk along the wall, enjoy panoramic views, and explore its various gates, command posts, and pavilions.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Myeongdong</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Shopper's paradise — K-beauty stores, street food stalls, fashion. Great for cosmetics and snacks.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Lunch in Haenggung-dong</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a traditional Korean meal in the charming Haenggung-dong area, known for its various restaurants and cafes near the fortress.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Han River Picnic</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Pick up convenience store chicken and head to Yeouido Hangang Park for a classic Seoul river evening.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">13:50</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Hwaseong Haenggung Palace</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">The largest supplemental palace, or 'Haenggung,' used by the kings during the Joseon Dynasty. King Jeongjo often stayed here when visiting Suwon Hwaseong Fortress and held various ceremonies and banquets.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">15:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Jidong Market</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">One of Suwon's largest traditional markets, offering a vibrant atmosphere, fresh produce, street food, and various goods. It's a great place to experience local culture and find souvenirs.</p>
             </div>
           </div>
         </div>
@@ -569,19 +753,58 @@ tailwind.config = {
         <div class="pl-10 space-y-6 relative">
           <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
           <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-outline">Option A · Full Day</span>
-              <h4 class="font-headline font-semibold mt-0.5">DMZ Tour</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Guided tour of the Demilitarized Zone — Imjingak, the 3rd Infiltration Tunnel, Dora Observatory. Book in advance.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">08:00</span>
+                <span class="text-on-surface-variant text-xs">· 0m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Departure from Seoul</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day trip to the DMZ from a designated meeting point in Seoul. It is recommended to join a guided tour for DMZ visits due to security regulations and specific entry procedures.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-outline">Option B · Full Day</span>
-              <h4 class="font-headline font-semibold mt-0.5">Suwon Hwaseong Fortress</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">UNESCO World Heritage fortress (1796), 1 hour by train. Walk the full 5.7 km wall for great views.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:30</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Imjingak Park</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">The first stop near the DMZ, Imjingak Park is home to the Bridge of Freedom, which was used by repatriated POWs and soldiers, and the Mangbaedan Altar, where Koreans whose hometowns are in the North can pay their respects to their ancestors. Explore the various monuments and displays reflecting the pain of division and the hope for reunification.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">11:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">The Third Tunnel of Aggression</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Discovered in 1978, this tunnel was built by North Korea for a surprise attack on Seoul. Visitors can walk or take a monorail into a portion of the tunnel, offering a stark reminder of the ongoing tensions and the ingenuity of both sides during the Cold War.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">13:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dora Observatory</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">From this observation point, you can gaze across the DMZ into North Korean territory, seeing the city of Kaesong, the Kaesong Industrial Complex, and propaganda villages. Binoculars are available to get a closer look at the secluded land.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">14:30</span>
+                <span class="text-on-surface-variant text-xs">· 45m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dorasan Station</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">The northernmost railway station in South Korea, Dorasan Station symbolizes the hope for reunification. It is intended to connect to North Korean railways in the future, allowing travel from South Korea through North Korea to Europe. Explore the station and its poignant history.</p>
             </div>
           </div>
         </div>
@@ -677,9 +900,6 @@ tailwind.config = {
         <button onclick="switchDay('shanghai','1')" id="day-shanghai-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Thu May 28</button>
         <button onclick="switchDay('shanghai','2')" id="day-shanghai-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Fri May 29</button>
         <button onclick="switchDay('shanghai','3')" id="day-shanghai-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Sat May 30</button>
-        <a id="dayplan-link-shanghai" href="city details.html?city=shanghai&day=1" class="flex-none flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-headline font-semibold text-xs whitespace-nowrap active:scale-95 transition-transform">
-          <span class="material-symbols-outlined text-[14px]">event_note</span>Full Plan
-        </a>
       </div>
       <div id="daypanel-shanghai-1" class="day-panel space-y-4">
         <div class="flex items-center gap-2 mb-1">
@@ -691,17 +911,56 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Check-in & French Concession</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Drop bags and stroll through the leafy streets of the former French Concession — art deco buildings, cafés, boutiques.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">The Bund</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day with a stroll along The Bund, a historic waterfront promenade. Marvel at the colonial-era architecture on one side and the futuristic Pudong skyline across the Huangpu River.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">The Bund at Night</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Iconic waterfront promenade facing the Pudong skyline — colonial buildings vs futuristic towers. Unmissable at night.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">11:15</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Nanjing Road Pedestrian Street</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Immerse yourself in the bustling atmosphere of one of the world's busiest shopping streets. Enjoy the diverse array of shops, street food, and historic department stores. Grab lunch here.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">13:15</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Yu Garden and Old City God Temple</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Step back in time to explore the exquisite classical Chinese gardens, rockeries, and pavilions of Yu Garden. Afterwards, wander through the vibrant market surrounding the Old City God Temple, offering traditional snacks and souvenirs.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">16:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Lujiazui Financial District & Skyline</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Cross the Huangpu River to Pudong and be awed by the towering skyscrapers. Visit an observation deck (e.g., Shanghai Tower, Oriental Pearl TV Tower, Jin Mao Tower) for panoramic views of the city, including The Bund.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">18:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dinner with Bund View</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a relaxing dinner in Pudong, perhaps at a restaurant offering magnificent night views of The Bund's illuminated colonial buildings across the river, providing a perfect end to your day trip.</p>
             </div>
           </div>
         </div>
@@ -716,25 +975,56 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Shanghai Museum</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">World-class ancient Chinese art — bronzes, ceramics, calligraphy. Free entry, book online in advance.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Fuxing Park</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day with a leisurely stroll through Fuxing Park, a charming example of a French-style park where you can observe locals practicing tai chi, dancing, and playing mahjong in the morning.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Yuyuan Garden & Old Town</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Classical Ming Dynasty garden with zigzag bridges and pavilions. Browse the Old Town bazaar for local food.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">10:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Sinan Mansions</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore the historic Sinan Mansions area, a collection of beautifully preserved European-style villas, many of which now house upscale restaurants, cafes, and boutiques. It offers a glimpse into Shanghai's past elegance.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Xintiandi</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Upscale entertainment district in restored Shikumen stone-gate houses — great for dinner and drinks.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">12:25</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Tianzifang</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Wander through the labyrinthine alleys of Tianzifang, a bohemian district filled with art studios, craft shops, cafes, and restaurants housed in renovated traditional "shikumen" buildings. This is an excellent spot for lunch and some unique souvenir shopping.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">15:25</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Wukang Road & Wukang Mansion</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Take a leisurely walk along Wukang Road, renowned for its diverse architectural styles and historic residences. Admire the iconic Wukang Mansion, a unique ship-like building at the intersection, and the charming tree-lined avenue.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">17:05</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Hengshan Road</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Conclude your day on Hengshan Road, known for its vibrant evening atmosphere, European-style architecture, and numerous restaurants and bars. Enjoy dinner and soak in the lively ambiance.</p>
             </div>
           </div>
         </div>
@@ -750,19 +1040,58 @@ tailwind.config = {
         <div class="pl-10 space-y-6 relative">
           <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
           <div class="relative flex gap-3">
-            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-outline-variant mt-1 z-10 border-2 border-surface"></div>
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-outline">Optional · Early Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Zhujiajiao Water Town</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">1 hour from central Shanghai — ancient canal town with stone bridges and gondola rides. Go early to beat crowds.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">09:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Shanghai Museum</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Begin your day exploring ancient Chinese art and artifacts at the Shanghai Museum, located in People's Square. It houses a vast collection of bronze, ceramics, calligraphy, and more, offering a deep dive into China's rich history.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">11:30</span>
-              <h4 class="font-headline font-semibold mt-0.5">Head to Airport</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Flight to Xi'an at 13:50 · Trip.com · 20 kg + 7 kg carry-on.</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">11:45</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Shanghai Urban Planning Exhibition Center</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Discover the past, present, and future of Shanghai's urban development through detailed models, interactive exhibits, and a massive scale model of the city. It provides a fascinating insight into modern China's rapid growth.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">14:00</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">The Bund</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Stroll along the iconic waterfront promenade, offering breathtaking views of Shanghai's colonial-era buildings on one side and the futuristic Lujiazui skyline on the other. It's a perfect spot to appreciate the blend of old and new Shanghai.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">16:00</span>
+                <span class="text-on-surface-variant text-xs">· 2h</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Oriental Pearl TV Tower & Lujiazui Area</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Experience modern China with a visit to the Lujiazui financial district. You can choose to go up the iconic Oriental Pearl TV Tower for panoramic views, or simply enjoy the futuristic architecture and vibrant atmosphere of the area. There are also many shopping and dining options here.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-label text-xs font-bold text-primary">18:10</span>
+                <span class="text-on-surface-variant text-xs">· 1h 30m</span>
+              </div>
+              <h4 class="font-headline font-semibold mt-0.5">Dinner in Lujiazui</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a modern Chinese dinner at one of the many upscale restaurants in the Lujiazui area, offering spectacular views of the illuminated skyline to conclude your day.</p>
             </div>
           </div>
         </div>
@@ -827,9 +1156,6 @@ tailwind.config = {
         <button onclick="switchDay('xian','1')" id="day-xian-1" class="day-tab active flex-none px-4 py-1.5 rounded-full bg-primary text-on-primary font-headline font-semibold text-xs whitespace-nowrap">Sat May 30</button>
         <button onclick="switchDay('xian','2')" id="day-xian-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Sun May 31</button>
         <button onclick="switchDay('xian','3')" id="day-xian-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Mon Jun 1</button>
-        <a id="dayplan-link-xian" href="city details.html?city=xian&day=1" class="flex-none flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-headline font-semibold text-xs whitespace-nowrap active:scale-95 transition-transform">
-          <span class="material-symbols-outlined text-[14px]">event_note</span>Full Plan
-        </a>
       </div>
       <div id="daypanel-xian-1" class="day-panel space-y-4">
         <div class="flex items-center gap-2 mb-1">
@@ -1021,31 +1347,46 @@ tailwind.config = {
         <button onclick="switchDay('beijing','2')" id="day-beijing-2" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Wed Jun 3</button>
         <button onclick="switchDay('beijing','3')" id="day-beijing-3" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Thu Jun 4</button>
         <button onclick="switchDay('beijing','4')" id="day-beijing-4" class="day-tab flex-none px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-headline font-medium text-xs whitespace-nowrap">Fri Jun 5</button>
-        <a id="dayplan-link-beijing" href="city details.html?city=beijing&day=1" class="flex-none flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-headline font-semibold text-xs whitespace-nowrap active:scale-95 transition-transform">
-          <span class="material-symbols-outlined text-[14px]">event_note</span>Full Plan
-        </a>
       </div>
       <div id="daypanel-beijing-1" class="day-panel space-y-4">
         <div class="flex items-center gap-2 mb-1">
           <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-headline font-bold text-sm text-on-secondary-container">1</div>
-          <p class="font-headline font-bold">Arrival & Wangfujing</p>
+          <p class="font-headline font-bold">Tiananmen Square & Forbidden City</p>
         </div>
         <div class="pl-10 space-y-6 relative">
           <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Check-in & Wangfujing Street</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Beijing's famous shopping street — right next to your hotel. Try scorpion-on-a-stick at Donghuamen Night Market.</p>
+              <span class="font-label text-xs font-bold text-primary">09:00 — 1h 30m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tiananmen Square</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day at this iconic public square, a significant site in Chinese history. You can see the Monument to the People's Heroes, the Great Hall of the People, and the National Museum of China (exterior view).</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Tiananmen Square at Dusk</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A short walk from the hotel — see the vast square lit up at dusk and admire the scale of this historic plaza.</p>
+              <span class="font-label text-xs font-bold text-primary">10:40 — 30m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Tiananmen Gate (Gate of Heavenly Peace)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Pass through the Gate of Heavenly Peace, famous for its large portrait of Mao Zedong, which serves as the main entrance to the Forbidden City complex.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: walking (10 minutes)</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">11:20 — 4h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Forbidden City</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore the vast Forbidden City, a UNESCO World Heritage site and the former imperial palace for 24 emperors. Wander through grand halls, courtyards, and gardens, delving into centuries of Chinese imperial history. Allow ample time to see the Hall of Supreme Harmony, the Imperial Garden, and various palaces.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: walking (10 minutes)</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">15:35 — 1h 30m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Jingshan Park</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Conclude your day with a visit to Jingshan Park, located directly opposite the Forbidden City's north gate. Climb to the top of the hill for a breathtaking panoramic view of the entire Forbidden City and Beijing's cityscape.</p>
             </div>
           </div>
         </div>
@@ -1053,32 +1394,42 @@ tailwind.config = {
       <div id="daypanel-beijing-2" class="day-panel hidden space-y-4">
         <div class="flex items-center gap-2 mb-1">
           <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">2</div>
-          <p class="font-headline font-bold">Forbidden City</p>
+          <p class="font-headline font-bold">Mutianyu Great Wall</p>
         </div>
         <div class="pl-10 space-y-6 relative">
           <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning — Book Tickets Online!</span>
-              <h4 class="font-headline font-semibold mt-0.5">Tiananmen Square & Forbidden City</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">World's largest imperial palace — 980 buildings, 8,704 rooms. Allow 3+ hours. Pre-book on Palace Museum website — essential, sells out fast.</p>
+              <span class="font-label text-xs font-bold text-primary">08:00 — 30m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Departure from Beijing</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day trip from a central location in Beijing. Ensure you have comfortable shoes and water for the day.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: driving (1 hour 30 minutes)</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Jingshan Park</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Hill directly behind the Forbidden City — climb for the best aerial view of the entire palace complex.</p>
+              <span class="font-label text-xs font-bold text-primary">09:30 — 4h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Mutianyu Great Wall</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore the well-preserved Mutianyu section of the Great Wall. Enjoy breathtaking views, walk along the ancient battlements, and consider taking the cable car up and the toboggan slide down for a fun experience. This section is less crowded than Badaling and offers excellent photo opportunities.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: driving (1 hour 30 minutes)</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Hutong Dinner</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Explore Nanluoguxiang or Wudaoying Hutong for traditional Beijing cuisine in the ancient alleyways.</p>
+              <span class="font-label text-xs font-bold text-primary">13:45 — 1h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Lunch near Mutianyu</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a well-deserved lunch at one of the local restaurants near the Mutianyu Great Wall. Try some authentic local Chinese cuisine.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">16:15 — 30m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Arrival in Beijing</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Conclude your Great Wall day trip back in central Beijing.</p>
             </div>
           </div>
         </div>
@@ -1086,32 +1437,62 @@ tailwind.config = {
       <div id="daypanel-beijing-3" class="day-panel hidden space-y-4">
         <div class="flex items-center gap-2 mb-1">
           <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">3</div>
-          <p class="font-headline font-bold">The Great Wall</p>
+          <p class="font-headline font-bold">Summer Palace</p>
         </div>
         <div class="pl-10 space-y-6 relative">
           <div class="absolute left-4 top-0 bottom-0 w-px bg-surface-container-high"></div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Full Day</span>
-              <h4 class="font-headline font-semibold mt-0.5">Mutianyu Great Wall</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Most scenic and least-crowded restored section. Optional toboggan ride down! ~1.5 hours from Beijing. Spend 3+ hours walking the wall between watchtowers.</p>
+              <span class="font-label text-xs font-bold text-primary">09:00 — 30m</span>
+              <h4 class="font-headline font-semibold mt-0.5">East Palace Gate</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">The main entrance to the Summer Palace, where you can start your exploration. Admire the traditional imperial architecture before heading deeper into the palace grounds.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: walking (10 minutes)</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Evening</span>
-              <h4 class="font-headline font-semibold mt-0.5">Peking Duck Dinner</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">You've earned it! Try Quanjude or Da Dong — crispy skin, thin pancakes, hoisin sauce. Beijing's most iconic dish.</p>
+              <span class="font-label text-xs font-bold text-primary">09:40 — 45m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Hall of Benevolence and Longevity</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">An important administrative area where Emperor Guangxu and Empress Dowager Cixi conducted court affairs. Marvel at the intricate designs and historical artifacts.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: walking (10 minutes)</p>
             </div>
           </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">10:35 — 45m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Garden of Virtue and Harmony (Grand Theatre)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Home to the magnificent Grand Theatre, where Empress Dowager Cixi enjoyed Peking Opera performances. The three-story stage is an architectural marvel.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: walking (10 minutes)</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">11:30 — 1h 15m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Long Corridor</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A UNESCO World Heritage site, this 728-meter long covered walkway is adorned with over 14,000 paintings depicting classical Chinese landscapes and stories. It offers stunning views of Kunming Lake.</p>
+              <p class="text-on-surface-variant text-xs mt-1 italic">Travel: walking (10 minutes)</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">13:45 — 45m</span>
+              <h4 class="font-headline font-semibold mt-0.5">Marble Boat</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A unique and elegant two-story boat carved from marble, built by Empress Dowager Cixi with funds originally intended for the navy. It symbolizes stability and longevity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
       <div id="daypanel-beijing-4" class="day-panel hidden space-y-4">
         <div class="flex items-center gap-2 mb-1">
           <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-headline font-bold text-sm text-on-surface-variant">4</div>
-          <p class="font-headline font-bold">Last Day & Departure</p>
+          <p class="font-headline font-bold">Hutongs & Historic Beijing</p>
         </div>
         <div class="bg-amber-50 rounded-2xl p-4 mb-3 border border-amber-200">
           <p class="text-amber-800 font-semibold text-sm">✈️ Flight home at 19:50 — head to PEK airport by 17:00</p>
@@ -1121,17 +1502,33 @@ tailwind.config = {
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Morning</span>
-              <h4 class="font-headline font-semibold mt-0.5">Summer Palace</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">UNESCO imperial garden on Kunming Lake. Stroll the Long Corridor, rent a rowboat, visit the Marble Boat.</p>
+              <span class="font-label text-xs font-bold text-primary">09:00 — 2h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Nanluoguxiang Hutong</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Start your day exploring one of Beijing's most famous and best-preserved hutongs. Wander through its narrow alleys, admire traditional courtyard homes, browse unique boutiques, and enjoy the lively atmosphere.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
             <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
             <div class="flex-1">
-              <span class="font-label text-xs font-bold text-primary">Afternoon</span>
-              <h4 class="font-headline font-semibold mt-0.5">Last Hutong Walk</h4>
-              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A final wander through the ancient alleyways — tea house, street food, last souvenirs.</p>
+              <span class="font-label text-xs font-bold text-primary">11:30 — 2h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Shichahai Scenic Area (Houhai Lake & Yandaixiejie)</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">A picturesque area comprising three lakes (Qianhai, Houhai, and Xihai) surrounded by historic residences, temples, and lively bars. Walk along Houhai Lake, visit the ancient Yandaixiejie (Tobacco Pouch Street), and soak in the serene beauty.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">13:45 — 1.5h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Lunch & Bell and Drum Towers Area</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Enjoy a traditional Beijing lunch at a local eatery in the hutongs surrounding the iconic Bell and Drum Towers. Afterward, explore these impressive historical structures and the charming, less commercialized alleys nearby.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-3">
+            <div class="absolute -left-6 w-2.5 h-2.5 rounded-full bg-primary mt-1 z-10 border-2 border-surface"></div>
+            <div class="flex-1">
+              <span class="font-label text-xs font-bold text-primary">16:00 — 2h</span>
+              <h4 class="font-headline font-semibold mt-0.5">Dashilar Street & Qianmen Main Street</h4>
+              <p class="text-on-surface-variant text-sm mt-0.5 leading-relaxed">Experience the vibrant commercial history of Beijing at Dashilar, a bustling traditional street known for its century-old shops, theaters, and local snacks. It's just off the grand Qianmen Main Street, offering a glimpse into old Beijing's merchant culture.</p>
             </div>
           </div>
           <div class="relative flex gap-3">
