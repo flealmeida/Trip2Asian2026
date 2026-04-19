@@ -2,13 +2,13 @@
 
 ## What This Is
 
-A personal travel planning web app for an Asia trip (May 18 – June 6, 2026, 19 days, 5 cities). It is a **static, no-build, single-page app** — no npm, no bundler, no server. Open the HTML files directly in a browser.
+A personal travel planning web app for an Asia trip (May 18 – June 7, 2026, 20 days, 5 cities). It is a **static, no-build, single-page app** — no npm, no bundler, no server. Open the HTML files directly in a browser.
 
 ## Trip Overview
 
 - **Route**: Warsaw (WAW) → Hong Kong → Seoul → Shanghai → Xi'an → Beijing → Warsaw
 - **Outbound**: Etihad EY160 + EY870, May 18 depart 11:50, arrive HKG May 19 09:00
-- **Return**: from Beijing, June 6
+- **Return**: depart Beijing June 6, arrive Warsaw June 7
 
 | City | Dates | Nights |
 |------|-------|--------|
@@ -16,7 +16,7 @@ A personal travel planning web app for an Asia trip (May 18 – June 6, 2026, 19
 | 🇰🇷 Seoul | May 23–27 | 5 |
 | 🇨🇳 Shanghai | May 28–30 | 3 |
 | 🏛️ Xi'an | May 30 – Jun 1 | 2 |
-| 🏯 Beijing | Jun 2–5 | 4 |
+| 🏯 Beijing | Jun 2–6 | 5 |
 
 ## File Structure
 
@@ -31,7 +31,7 @@ day-plans/               — Source .txt files with day itinerary content
   Seoul.day-plan.1.txt … (5 files)
   Shanghai.day-plan.1.txt … (4 files)
   Xi'an.day-plan.1.txt … (2 files)
-  Beijing.day-plan.1.txt … (4 files)
+  Beijing.day-plan.1.txt … (5 files)
 Claude Asia 2026.xlsx    — Source spreadsheet with trip data
 ```
 
